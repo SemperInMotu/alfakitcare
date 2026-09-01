@@ -1,0 +1,742 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>ALFAKIT Care — поддержка IBM Domino и HCL Notes · TMS PROLOG / ALFAKIT</title>
+  <meta name="description" content="Аудит, поддержка и доработка PROLOG / ALFAKIT на IBM Domino и HCL Notes. Пакеты Care, модули, отчёты TMS. Практика Semper In Motu. info@alfakit.by" />
+  <link rel="canonical" href="https://alfakit.by/ru/" />
+  <link rel="alternate" hreflang="en" href="https://alfakit.by/" />
+  <link rel="alternate" hreflang="ru" href="https://alfakit.by/ru/" />
+  <link rel="alternate" hreflang="be" href="https://alfakit.by/be/" />
+  <link rel="alternate" hreflang="x-default" href="https://alfakit.by/" />
+  <meta name="robots" content="index,follow" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="ALFAKIT Care" />
+  <meta property="og:locale" content="ru_RU" />
+  <meta property="og:title" content="ALFAKIT Care — поддержка Domino TMS" />
+  <meta property="og:description" content="Аудит, поддержка и доработка действующих систем PROLOG / ALFAKIT на IBM Domino и HCL Notes." />
+  <meta property="og:url" content="https://alfakit.by/ru/" />
+  <meta property="og:image" content="https://alfakit.by/assets/og-default.jpg" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="ALFAKIT Care — IBM Domino и HCL Notes · TMS" />
+  <meta name="twitter:description" content="Аудит и поддержка действующих систем PROLOG / ALFAKIT: модули, регламент реакции, план NEXT." />
+  <meta name="twitter:image" content="https://alfakit.by/assets/og-default.jpg" />
+  <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=Syne:wght@600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../styles.css" />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "ProfessionalService",
+        "@id": "https://alfakit.by/#org",
+        "name": "ALFAKIT Care",
+        "alternateName": "ALFAKIT TMS Support",
+        "url": "https://alfakit.by/",
+        "email": "info@alfakit.by",
+        "telephone": "+375296757858",
+        "image": "https://alfakit.by/assets/og-default.jpg",
+        "description": "Аудит, поддержка и доработка действующих систем PROLOG / ALFAKIT на IBM Domino и HCL Notes.",
+        "parentOrganization": {
+          "@type": "Organization",
+          "name": "Semper In Motu",
+          "url": "https://semperinmotu.com/"
+        },
+        "areaServed": ["BY", "RU", "EU"],
+        "sameAs": [
+          "https://www.linkedin.com/in/vitalykhoruzhko",
+          "https://semperinmotu.com/",
+          "https://vitalykhoruzhko.com/"
+        ],
+        "knowsAbout": ["IBM Domino", "HCL Notes", "TMS", "PROLOG", "ALFAKIT", "LotusScript"]
+      },
+      {
+        "@type": "FAQPage",
+        "@id": "https://alfakit.by/ru/#faq",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "Вы заменяете наш IBM Domino или HCL Notes?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Нет. Мы поддерживаем и дорабатываем действующую систему. ALFAKIT NEXT — поэтапный план развития без слепой замены ядра."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Есть ли аудит текущей системы как отдельная услуга?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Да. Аудит системы — от 3 000 BYN, срок 5–10 рабочих дней. Результат: письменный отчёт, перечень рисков, опись доработок и список работ по приоритету. Стоимость зачитывается в договор на поддержку в течение 30 дней."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Сколько стоит поддержка Domino и ALFAKIT?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Ориентиры: Care от 2 500 BYN в месяц, Growth от 6 000, Scale от 11 500, Incident от 1 200. Окончательная цена — после аудита системы."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Какой регламент реакции на обращения?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "P1 — не более 2 рабочих часов на первый ответ, P2 — не более 4 рабочих часов, P3 — не более 1 рабочего дня. Часы и порядок эскалации фиксируются в договоре пакета."
+            }
+          }
+        ]
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+  <a class="skip-link" href="#main">К содержимому</a>
+  <header class="site-header">
+    <div class="wrap header-inner">
+      <a class="brand" href="#top">ALFAKIT <span class="brand-dot">Care</span></a>
+      <nav class="nav" aria-label="Разделы">
+        <a href="#platform">Платформа</a>
+        <a href="#audit">Аудит</a>
+        <a href="#functions">Доработки</a>
+        <a href="#packages">Пакеты</a>
+        <a href="#cases">Кейсы</a>
+        <a href="#faq">Вопросы</a>
+        <a href="#contact">Контакты</a>
+      </nav>
+      <div class="header-actions">
+        <nav class="lang-switch" aria-label="Language" data-lang-switch><span class="lang-current" aria-current="page">RU</span><a href="../be/" hreflang="be">BE</a><a href="../" hreflang="en">EN</a></nav>
+        <a class="btn btn-sm" href="#contact">Написать</a>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero" id="top" aria-labelledby="hero-brand">
+      <div class="hero-visual" aria-hidden="true">
+        <svg class="hero-routes" viewBox="0 0 1440 900" preserveAspectRatio="xMidYMid slice">
+          <defs>
+            <linearGradient id="routeGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" stop-color="#6a9bb0" stop-opacity="0.55" />
+              <stop offset="100%" stop-color="#c4d4de" stop-opacity="0.15" />
+            </linearGradient>
+          </defs>
+          <g class="route-layer" fill="none" stroke="url(#routeGrad)" stroke-width="1.25">
+            <path d="M-40 620 C 180 480, 320 720, 520 540 S 880 280, 1100 420 S 1380 680, 1520 520" />
+            <path d="M-20 240 C 220 180, 400 360, 640 220 S 980 80, 1220 200 S 1400 360, 1500 280" />
+            <path d="M80 780 C 300 640, 480 820, 700 660 S 1040 500, 1280 620 S 1460 780, 1600 700" />
+          </g>
+          <g class="node-layer" fill="#6a9bb0">
+            <circle cx="520" cy="540" r="5" opacity="0.85" />
+            <circle cx="1100" cy="420" r="6" opacity="0.9" />
+            <circle cx="700" cy="660" r="5" opacity="0.75" />
+          </g>
+        </svg>
+        <div class="hero-grid"></div>
+      </div>
+      <div class="wrap hero-content">
+        <p class="hero-brand" id="hero-brand">ALFAKIT Care</p>
+        <h1 class="hero-title">Сопровождение Domino TMS для экспедиторов и перевозчиков</h1>
+        <p class="hero-lead">
+          Действующие PROLOG / ALFAKIT на IBM Domino и HCL Notes: доработка, поддержка
+          с регламентом реакции, модули и отчёты. Практика — Semper In Motu.
+        </p>
+        <div class="hero-cta">
+          <a class="btn" href="#contact">Обсудить задачу</a>
+          <a class="btn btn-ghost" href="#audit">Аудит системы</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section platform" id="platform" aria-labelledby="platform-title">
+      <div class="wrap">
+        <p class="section-kicker">Платформа</p>
+        <h2 id="platform-title">Два контура одной экспертизы</h2>
+        <p class="section-lead">Доработка действующей TMS/CRM на Domino. План ALFAKIT NEXT — отдельный поэтапный трек, не условие для Care.</p>
+        <div class="dual-grid">
+          <article class="dual-block">
+            <h3>Унаследованный Domino</h3>
+            <p class="dual-sub">IBM Domino и HCL Notes · PROLOG / ALFAKIT</p>
+            <ul class="platform-points compact">
+              <li>Агенты на LotusScript и Java, формы, представления, права, базы NSF</li>
+              <li>Обмены: 1С, электронный документооборот, CSV/Excel, отчётность, веб-запросы</li>
+              <li>Нагрузка сервера, расписания агентов, резервное копирование</li>
+              <li>Точечные доработки в действующей системе</li>
+            </ul>
+          </article>
+          <article class="dual-block dual-next">
+            <h3>План развития ALFAKIT NEXT</h3>
+            <p class="dual-sub">Современная платформа для нескольких компаний</p>
+            <ul class="platform-points compact">
+              <li>Перенос процессов и данных с Domino без потери истории</li>
+              <li>Открытые интерфейсы обмена, постепенное замещение, параллельный контур</li>
+              <li>Выгрузки в отчётность и обмены без потери операционной истории</li>
+              <li>Порядок: аудит → пилот → переключение по участкам</li>
+            </ul>
+          </article>
+        </div>
+        <p class="bridge-note">
+          Данные, DWH, ALFAKIT SMART и KPI-пилоты —
+          <a href="https://semperinmotu.com/ru/ops/" rel="noopener">Semper In Motu · Ops</a>.
+          Этот сайт — только сопровождение Domino TMS.
+        </p>
+      </div>
+    </section>
+
+    <section class="section audit" id="audit" aria-labelledby="audit-title">
+      <div class="wrap">
+        <p class="section-kicker">С чего начать</p>
+        <h2 id="audit-title">Аудит системы</h2>
+        <p class="section-lead">Платное обследование действующей установки с фиксированным объёмом работ. Результат — письменный отчёт, который остаётся у вас, даже если договор на поддержку мы так и не подпишем.</p>
+        <div class="support-grid">
+          <article class="support-item">
+            <h3>Что смотрим</h3>
+            <p>Нагрузка сервера и тяжёлые представления, очереди и расписания агентов, разграничение доступа, обмены с внешними системами, недокументированные доработки предыдущих подрядчиков.</p>
+          </article>
+          <article class="support-item">
+            <h3>Что получаете</h3>
+            <p>Письменный отчёт, перечень рисков с оценкой последствий, опись доработок и зависимостей, список работ по приоритету с оценкой в часах.</p>
+          </article>
+          <article class="support-item">
+            <h3>Стоимость и срок</h3>
+            <p>От 3 000 BYN, 5–10 рабочих дней в зависимости от размера системы. Стоимость зачитывается в договор на поддержку, если он заключён в течение 30 дней.</p>
+          </article>
+          <article class="support-item">
+            <h3>Зачем именно так</h3>
+            <p>Честную оценку нельзя дать, не заглянув внутрь. Аудит заменяет догадки документом — и даёт вам основание торговаться с любым подрядчиком, не только с нами.</p>
+          </article>
+        </div>
+        <p class="package-note">Аудит не обязывает вас к поддержке. Запросить — в <a href="#contact">форме ниже</a>, тема «Аудит системы».</p>
+      </div>
+    </section>
+
+    <section class="section bpr" id="bpr" aria-labelledby="bpr-title">
+      <div class="wrap">
+        <p class="section-kicker">Процессы</p>
+        <h2 id="bpr-title">Оптимизация процессов</h2>
+        <p class="section-lead">Сначала пересобираем, как работает компания — затем закрепляем это в TMS/CRM. Автоматизация сломанного процесса только ускоряет хаос.</p>
+        <div class="bpr-steps">
+          <article>
+            <h3>Как есть → как должно быть</h3>
+            <p>Схема потока (заявка → расчёт стоимости → сделка → документы → оплата), узкие места и скрытая логика в агентах и таблицах Excel.</p>
+          </article>
+          <article>
+            <h3>Роли и решения</h3>
+            <p>Кто что видит, где согласование и норматив времени; убираем лишние петли до правок в формах и правах.</p>
+          </article>
+          <article>
+            <h3>Внедрение в систему</h3>
+            <p>Представления, агенты, формы и отчёты — под новую целевую схему процесса. Сначала пилот, затем поэтапное внедрение с приёмкой пользователями.</p>
+          </article>
+          <article>
+            <h3>Метрики</h3>
+            <p>Контрольные срезы в отчётности: время реакции, маржа, незакрытые сделки — чтобы процесс не откатился назад.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section products" id="functions" aria-labelledby="functions-title">
+      <div class="wrap">
+        <p class="section-kicker">Доработки</p>
+        <h2 id="functions-title">Кластеры доработок</h2>
+        <p class="section-lead">Четыре направления. Полный каталог модулей — на отдельной странице.</p>
+        <div class="cluster-grid">
+          <article class="cluster">
+            <h3>Финансы</h3>
+            <p>1С и платежи, документы и электронный документооборот, мультивалютные выгрузки, экономика перевозок, дебиторская и кредиторская задолженность.</p>
+          </article>
+          <article class="cluster">
+            <h3>Продажи</h3>
+            <p>Запросы и расчёты стоимости, кураторы и премии, ставки, норматив времени реакции, план и факт.</p>
+          </article>
+          <article class="cluster">
+            <h3>Операции</h3>
+            <p>Печатные формы, таможня, представления и фильтры, договорная дисциплина, быстродействие.</p>
+          </article>
+          <article class="cluster">
+            <h3>Доступ</h3>
+            <p>Роли менеджера, экспедитора, куратора, руководителя и бухгалтера; права доступа, приём и увольнение сотрудников.</p>
+          </article>
+        </div>
+        <p class="cluster-cta"><a class="btn" href="modules.html">Каталог модулей</a></p>
+      </div>
+    </section>
+
+    <section class="section products products-alt" id="reports" aria-labelledby="reports-title">
+      <div class="wrap">
+        <p class="section-kicker">Аналитика</p>
+        <h2 id="reports-title">Отчёты и панели показателей</h2>
+        <p class="section-lead">Ролевые отчёты и выгрузки из системы (Excel / QlikView / Power BI). Демо-панели: <a href="../analytics/ru/index.html">RU (₽)</a> · <a href="../analytics/be/index.html">BE (BYN)</a> · <a href="../analytics/index.html">EN ($)</a>. Полноценное хранилище — в <a href="https://semperinmotu.com/ru/ops/data.html">Semper In Motu</a>.</p>
+        <div class="dash-grid">
+          <figure class="dash-figure dash-figure-live">
+            <div class="dash-preview">
+              <p class="dash-preview-kicker">Руководитель</p>
+              <h3 class="dash-preview-title">Состояние бизнеса</h3>
+              <p class="dash-preview-lead">Выручка, маржа, воронка и SLA — сводка за месяц.</p>
+              <div class="dash-preview-links">
+                <a class="btn btn-sm" href="../analytics/ru/ceo.html">Открыть демо</a>
+                <a class="btn btn-sm btn-ghost" href="../analytics/ru/index.html">Все панели</a>
+              </div>
+            </div>
+            <figcaption><strong>Руководитель</strong> — выручка, прибыль, открытые сделки, соблюдение сроков</figcaption>
+          </figure>
+          <figure class="dash-figure dash-figure-live">
+            <div class="dash-preview">
+              <p class="dash-preview-kicker">Финансовый директор</p>
+              <h3 class="dash-preview-title">Экономика и казначейство</h3>
+              <p class="dash-preview-lead">Касса, дебиторка/кредиторка, курсовые разницы, план/факт.</p>
+              <div class="dash-preview-links">
+                <a class="btn btn-sm" href="../analytics/ru/cfo.html">Открыть демо</a>
+              </div>
+            </div>
+            <figcaption><strong>Финансовый директор</strong> — экономика, дебиторка и кредиторка, курсовые разницы</figcaption>
+          </figure>
+          <figure class="dash-figure dash-figure-live">
+            <div class="dash-preview">
+              <p class="dash-preview-kicker">Директор по продажам</p>
+              <h3 class="dash-preview-title">План продаж и воронка</h3>
+              <p class="dash-preview-lead">Сводка по команде и индивидуальный план менеджера.</p>
+              <div class="dash-preview-links">
+                <a class="btn btn-sm" href="../analytics/ru/sales-team.html">Все продавцы</a>
+                <a class="btn btn-sm btn-ghost" href="../analytics/ru/sales-manager.html">Один менеджер</a>
+              </div>
+            </div>
+            <figcaption><strong>Директор по продажам</strong> — план/факт по звонкам, КП, договорам и сделкам</figcaption>
+          </figure>
+          <figure class="dash-figure dash-figure-live">
+            <div class="dash-preview">
+              <p class="dash-preview-kicker">Транспортный отдел</p>
+              <h3 class="dash-preview-title">Операционный контроль</h3>
+              <p class="dash-preview-lead">Перевозки, сроки, перевозчики, загрузка направлений, исключения.</p>
+              <div class="dash-preview-links">
+                <a class="btn btn-sm" href="../analytics/ru/transport.html">Открыть демо</a>
+              </div>
+            </div>
+            <figcaption><strong>Руководитель транспорта</strong> — диспетчерская, перевозчики, задержки и таможня</figcaption>
+          </figure>
+          <figure class="dash-figure dash-figure-live">
+            <div class="dash-preview">
+              <p class="dash-preview-kicker">Акционеры</p>
+              <h3 class="dash-preview-title">Инвесторская сводка</h3>
+              <p class="dash-preview-lead">Рост, EBITDA, ROE, дивиденды, квартальные результаты.</p>
+              <div class="dash-preview-links">
+                <a class="btn btn-sm" href="../analytics/ru/shareholders.html">Открыть демо</a>
+              </div>
+            </div>
+            <figcaption><strong>Акционеры</strong> — пакет для совета директоров без операционной детализации</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <section class="section support" id="support" aria-labelledby="support-title">
+      <div class="wrap">
+        <p class="section-kicker">Сервис</p>
+        <h2 id="support-title">Администрирование и регламент реакции</h2>
+        <p class="section-lead">Нагрузка сервера, расписания агентов и матрица приоритетов обращений.</p>
+        <div class="support-grid">
+          <article class="support-item">
+            <h3>Управление нагрузкой</h3>
+            <p>Тяжёлые представления, индексация, DAOS, разнесение дисков, ограничение пиковых отчётов.</p>
+          </article>
+          <article class="support-item">
+            <h3>Расписания агентов</h3>
+            <p>Планировщик агентов, порядок запуска, журналы, зависшие очереди, серверные агенты по базам.</p>
+          </article>
+          <article class="support-item">
+            <h3>Права и резервное копирование</h3>
+            <p>Права доступа, отключение уволенных, базы NSF и DAOS, сравнение с резервной копией, разделение тестового и рабочего контура.</p>
+          </article>
+          <article class="support-item">
+            <h3>LotusScript и Java</h3>
+            <p>Диагностика агентов, правки форм и представлений, проверка критичных документов после изменений.</p>
+          </article>
+        </div>
+        <h3 class="subsection-title">Матрица приоритетов и сроков</h3>
+        <div class="sla-table-wrap">
+          <table class="sla-table">
+            <thead>
+              <tr><th>Приоритет</th><th>Когда</th><th>Первый ответ</th><th>Цель восстановления</th></tr>
+            </thead>
+            <tbody>
+              <tr><td><strong>P1</strong></td><td>Рабочая система недоступна или операции массово заблокированы</td><td>≤ 2 раб. часа</td><td>В тот же день или обходное решение</td></tr>
+              <tr><td><strong>P2</strong></td><td>Критичный процесс работает с деградацией</td><td>≤ 4 раб. часа</td><td>≤ 2 раб. дня</td></tr>
+              <tr><td><strong>P3</strong></td><td>Ошибка без блокировки, доработка</td><td>≤ 1 раб. день</td><td>По согласованному плану</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="package-note">Окно поддержки и порядок эскалации фиксируются в договоре пакета (в договорах это называется SLA). Круглосуточный режим — опция к пакету Scale.</p>
+      </div>
+    </section>
+
+    <section class="section legacy" id="legacy" aria-labelledby="legacy-title">
+      <div class="wrap">
+        <p class="section-kicker">Устойчивость</p>
+        <h2 id="legacy-title">Снижение рисков унаследованной системы</h2>
+        <p class="section-lead">Система, которой 10–20 лет, ломается предсказуемо. Ниже — работы, которые почти никто не заказывает, пока не случится авария.</p>
+        <div class="support-grid">
+          <article class="support-item">
+            <h3>Проверка восстановления</h3>
+            <p>Восстанавливаем вашу резервную копию в тестовую среду и замеряем время. «Резервные копии делаются» и «восстановление работает» — разные утверждения, и второе проверяется только опытом.</p>
+          </article>
+          <article class="support-item">
+            <h3>Тестовая среда</h3>
+            <p>У многих установок её просто нет: правки идут сразу в рабочую систему. Разводим тестовый и рабочий контур, чтобы обновления перестали быть лотереей.</p>
+          </article>
+          <article class="support-item">
+            <h3>Опись доработок</h3>
+            <p>Восстанавливаем документацию по тому, что оставили предыдущие разработчики: какой агент за что отвечает, откуда берёт данные, что сломается, если его выключить.</p>
+          </article>
+          <article class="support-item">
+            <h3>Версии и лицензии</h3>
+            <p>Путь обновления IBM Domino и HCL Notes, модель лицензирования, что перестанет работать по дороге и в каком порядке это чинить.</p>
+          </article>
+          <article class="support-item">
+            <h3>Обучение вашего администратора</h3>
+            <p>Передаём рутину внутрь вашей команды: журналы, права, перезапуск агентов, типовая диагностика. Наша задача — чтобы вы звали нас реже, а не чаще.</p>
+          </article>
+          <article class="support-item">
+            <h3>План выхода</h3>
+            <p>Исходники, выгрузки данных и документация остаются у вас. Уйти от подрядчика должно быть технически возможно — иначе это не поддержка, а заложничество.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section packages" id="packages" aria-labelledby="packages-title">
+      <div class="wrap">
+        <p class="section-kicker">Подписка</p>
+        <h2 id="packages-title">Ежемесячная поддержка</h2>
+        <p class="section-lead">Абонентское обслуживание с регламентом реакции, банк часов и годовая скидка. Окончательная стоимость — после аудита системы. Цены ориентировочные, не являются публичной офертой.</p>
+        <div class="package-grid package-grid-4">
+          <article class="package">
+            <h3>Care</h3>
+            <p class="package-price">от 2 500<span class="byn-sign" aria-label="BYN"></span><span>/мес</span></p>
+            <p class="package-tag">Стабилизация</p>
+            <ul>
+              <li>~8–12 часов в месяц</li>
+              <li>P2–P3, ответ в рабочий день</li>
+              <li>Мелкие правки прав, представлений, агентов</li>
+            </ul>
+          </article>
+          <article class="package package-featured">
+            <h3>Growth</h3>
+            <p class="package-price">от 6 000<span class="byn-sign" aria-label="BYN"></span><span>/мес</span></p>
+            <p class="package-tag">Развитие</p>
+            <ul>
+              <li>~20–30 часов в месяц</li>
+              <li>Сроки по P1–P3 в договоре</li>
+              <li>Диагностика + 1–2 небольших обновления</li>
+            </ul>
+          </article>
+          <article class="package">
+            <h3>Scale</h3>
+            <p class="package-price">от 11 500<span class="byn-sign" aria-label="BYN"></span><span>/мес</span></p>
+            <p class="package-tag">Сопровождение Domino</p>
+            <ul>
+              <li>~40–60 часов в месяц</li>
+              <li>Расписания агентов и нагрузка сервера</li>
+              <li>Выгрузки в отчётность + квартальный разбор процессов</li>
+            </ul>
+          </article>
+          <article class="package">
+            <h3>Incident</h3>
+            <p class="package-price">от 1 200<span class="byn-sign" aria-label="BYN"></span><span>/мес</span></p>
+            <p class="package-tag">Только аварии</p>
+            <ul>
+              <li>Приоритетная очередь без банка доработок</li>
+              <li>P1–P2 по срокам пакета Care</li>
+              <li>Часы сверх — отдельно</li>
+            </ul>
+          </article>
+        </div>
+        <div class="price-box">
+          <h3>Разовые работы</h3>
+          <ul class="price-list">
+            <li><strong>Аудит системы</strong> — от 3 000<span class="byn-sign" aria-label="BYN"></span></li>
+            <li><strong>10 часов</strong> — от 2 300<span class="byn-sign" aria-label="BYN"></span></li>
+            <li><strong>25 часов</strong> — от 5 300<span class="byn-sign" aria-label="BYN"></span></li>
+            <li><strong>50 часов</strong> — от 10 000<span class="byn-sign" aria-label="BYN"></span></li>
+          </ul>
+          <p class="package-note">Годовой договор с предоплатой за 12 месяцев: −10…15% к месячной цене Care / Growth / Scale. Крупные модули — вне абонентской платы. Хранилища данных и проекты по ИИ — в <a href="https://semperinmotu.com/ru/ops/data.html">Semper In Motu</a>.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section audience" id="audience" aria-labelledby="audience-title">
+      <div class="wrap">
+        <h2 id="audience-title">Для кого</h2>
+        <div class="dual-grid">
+          <article class="dual-block">
+            <h3>Логистические TMS</h3>
+            <ul class="audience-list">
+              <li>Экспедиторы и перевозчики на PROLOG / ALFAKIT</li>
+              <li>Финансы, продажи, таможня, диспетчеры</li>
+              <li>Нужны доработки, отчётность и стабильный Domino</li>
+            </ul>
+          </article>
+          <article class="dual-block">
+            <h3>Другие системы на Domino</h3>
+            <ul class="audience-list">
+              <li>Компании на IBM Domino и HCL Notes вне чистой логистики</li>
+              <li>Документооборот, CRM, отраслевые базы NSF</li>
+              <li>Обмены, нагрузка, переход на NEXT</li>
+            </ul>
+          </article>
+        </div>
+        <p class="stack-title">Технологии ядра (TMS на Domino)</p>
+        <ul class="stack-list">
+          <li>IBM Domino · HCL Notes</li>
+          <li>LotusScript · агенты на Java · формулы</li>
+          <li>Веб-запросы · CSV / Excel · 1С · электронный документооборот</li>
+          <li>Выгрузки в QlikView / Power BI</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section cases" id="cases" aria-labelledby="cases-title">
+      <div class="wrap">
+        <h2 id="cases-title">Кейсы</h2>
+        <p class="section-lead">Обезличенно. Формат: проблема → действие → результат.</p>
+        <ol class="case-list">
+          <li class="case">
+            <h3>Импорт платежей из 1С</h3>
+            <p><strong>Проблема:</strong> дубли и обрезание счетов при загрузке по нескольким валютам.<br />
+            <strong>Действие:</strong> обмен через CSV, настройки импорта, проверка на реальных выписках.<br />
+            <strong>Результат:</strong> импорт клиентских платежей подтверждён на рабочих счетах.</p>
+          </li>
+          <li class="case">
+            <h3>Документы для электронного документооборота</h3>
+            <p><strong>Проблема:</strong> XML не проходил проверку оператора.<br />
+            <strong>Действие:</strong> шаблоны, проверки реквизитов и регионов.<br />
+            <strong>Результат:</strong> успешная отправка через оператора.</p>
+          </li>
+          <li class="case">
+            <h3>Отчётность для финансов, продаж и руководителя</h3>
+            <p><strong>Проблема:</strong> срезы существовали только в тяжёлых представлениях TMS.<br />
+            <strong>Действие:</strong> ежедневные выгрузки в QlikView, время реакции в часах, сценарии по ролям.<br />
+            <strong>Результат:</strong> отдельные панели показателей для финансов, продаж и руководства.</p>
+          </li>
+          <li class="case">
+            <h3>Роли диспетчеров и менеджеров</h3>
+            <p><strong>Проблема:</strong> сотрудники видели чужие сделки, процессы блокировались.<br />
+            <strong>Действие:</strong> модель ролей, права доступа, точечное восстановление прав.<br />
+            <strong>Результат:</strong> доступ и процессы снова соответствуют оргструктуре.</p>
+          </li>
+          <li class="case">
+            <h3>Оптимизация процесса расчёта стоимости</h3>
+            <p><strong>Проблема:</strong> запросы терялись между отделами, время ответа не измерялось.<br />
+            <strong>Действие:</strong> схема «как есть» и «как должно быть», роли в очереди, норматив реакции, выгрузка в отчётность.<br />
+            <strong>Результат:</strong> прозрачная очередь и контроль времени обработки в часах.</p>
+          </li>
+          <li class="case">
+            <h3>Выгрузка из TMS в управленческую отчётность</h3>
+            <p><strong>Проблема:</strong> сборка в Excel из нескольких контуров системы, расхождения по ключам.<br />
+            <strong>Действие:</strong> стабильные агенты выгрузки из Domino, согласованные поля под финансы и продажи.<br />
+            <strong>Результат:</strong> ежедневные срезы без ручной склейки. Полное хранилище из любых баз — в <a href="https://semperinmotu.com/ru/ops/data.html">Semper In Motu</a>.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="section process" id="process" aria-labelledby="process-title">
+      <div class="wrap">
+        <h2 id="process-title">Как работаем</h2>
+        <ol class="process-list">
+          <li><span class="process-step">01</span><div><h3>Разбор</h3><p>Симптом, роли, процесс или авария уровня P1–P3.</p></div></li>
+          <li><span class="process-step">02</span><div><h3>Оценка</h3><p>Действующая система, источники данных, план развития NEXT.</p></div></li>
+          <li><span class="process-step">03</span><div><h3>Поставка</h3><p>Модуль, отчёт, пакет поддержки или оптимизация процесса в системе.</p></div></li>
+          <li><span class="process-step">04</span><div><h3>Приёмка</h3><p>На реальных данных, затем — стабильный режим поддержки.</p></div></li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="section data-platform" id="bridge" aria-labelledby="bridge-title">
+      <div class="wrap">
+        <p class="section-kicker">Смежные проекты</p>
+        <h2 id="bridge-title">Данные, ИИ и агентство</h2>
+        <p class="section-lead">
+          alfakit.by — специалист по TMS на Domino. Данные и ИИ — в агентстве Semper In Motu. Портфель всех проектов — на <a href="https://vitalykhoruzhko.com/ru/">vitalykhoruzhko.com</a>.
+        </p>
+        <div class="support-grid">
+          <article class="support-item">
+            <h3>Данные: озеро, хранилище, витрины</h3>
+            <p>Хранилища и витрины из любых баз, обследование источников перед проектом.</p>
+            <p class="product-who"><a href="https://semperinmotu.com/ru/ops/data.html">semperinmotu.com/ops/data →</a></p>
+          </article>
+          <article class="support-item">
+            <h3>ИИ, SMART и пилоты</h3>
+            <p>Разбор звонков и пилоты по показателям поверх операционной системы.</p>
+            <p class="product-who"><a href="https://semperinmotu.com/ru/ops/">semperinmotu.com/ops →</a></p>
+          </article>
+          <article class="support-item">
+            <h3>Heritavia</h3>
+            <p>Документальная семейная история — отдельный сервис.</p>
+            <p class="product-who"><a href="https://heritavia.vitalykhoruzhko.com/ru/">heritavia.vitalykhoruzhko.com →</a></p>
+          </article>
+          <article class="support-item">
+            <h3>Портфель проектов</h3>
+            <p>Все проекты на одном узле: ALFAKIT · Semper · Heritavia.</p>
+            <p class="product-who"><a href="https://vitalykhoruzhko.com/ru/">vitalykhoruzhko.com →</a></p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section continuity" id="continuity" aria-labelledby="continuity-title">
+      <div class="wrap">
+        <p class="section-kicker">Риски для руководителя</p>
+        <h2 id="continuity-title">Непрерывность и передача</h2>
+        <p class="section-lead">Критичная TMS не должна зависеть от «одного человека, у которого всё в голове». Фиксируем документы в вашем контуре.</p>
+        <ul class="continuity-grid">
+          <li>
+            <h3>Договор и границы работ до старта</h3>
+            <p>Пакет Care–Scale, матрица приоритетов и границы работ — в соглашении. «Ещё одно поле» — это отдельная заявка на изменение, а не сюрприз в счёте.</p>
+          </li>
+          <li>
+            <h3>Документация системы у вас</h3>
+            <p>Регламент работ по агентам и правам, список доработок и решения по авариям остаются в вашем хранилище (Confluence, внутренняя вики или база NSF).</p>
+          </li>
+          <li>
+            <h3>Передача материалов</h3>
+            <p>Исходники агентов, форм, скриптов выгрузки и инструкция восстановления — по запросу в рамках договора. Без привязки к закрытому бинарнику.</p>
+          </li>
+          <li>
+            <h3>Эскалация P1–P3</h3>
+            <p>Приоритеты и целевые сроки — в договоре. Круглосуточный режим — опция к пакету Scale. Реквизиты юрлица и шаблон договора — по запросу на info@alfakit.by.</p>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section faq" id="faq" aria-labelledby="faq-title">
+      <div class="wrap">
+        <p class="section-kicker">Вопросы</p>
+        <h2 id="faq-title">Частые вопросы</h2>
+        <div class="faq-list">
+          <details>
+            <summary>Вы заменяете наш IBM Domino или HCL Notes?</summary>
+            <p>Нет. Поддерживаем и дорабатываем действующую систему. ALFAKIT NEXT — поэтапный план без слепой замены ядра. Переезд «одним прыжком» мы по умолчанию не предлагаем.</p>
+          </details>
+          <details>
+            <summary>Есть ли аудит текущей системы как отдельная услуга?</summary>
+            <p>Да, это основной способ начать. От 3 000 BYN, 5–10 рабочих дней. На выходе — письменный отчёт, перечень рисков, опись доработок и список работ по приоритету с оценкой в часах. Стоимость зачитывается в договор на поддержку, если он заключён в течение 30 дней. Отчёт остаётся у вас в любом случае. Подробнее — в разделе <a href="#audit">«Аудит системы»</a>.</p>
+          </details>
+          <details>
+            <summary>Сколько стоит поддержка?</summary>
+            <p>Ориентиры: Care от 2 500 BYN в месяц, Growth от 6 000, Scale от 11 500, Incident от 1 200. Окончательная цена — после аудита системы. Банк часов и годовая скидка −10…15% — в разделе пакетов.</p>
+          </details>
+          <details>
+            <summary>Какие сроки реакции вы гарантируете?</summary>
+            <p>P1 — не более 2 рабочих часов на первый ответ, P2 — не более 4 рабочих часов, P3 — не более 1 рабочего дня. Цели восстановления — в матрице выше. Часы поддержки и порядок эскалации фиксируются в договоре пакета (в договорах это называется SLA).</p>
+          </details>
+          <details>
+            <summary>Работаете только с PROLOG и ALFAKIT?</summary>
+            <p>Основной фокус — логистические TMS на Domino. Берём и другие базы NSF, CRM и документооборот на IBM Domino и HCL Notes, если задача в зоне LotusScript, Java, прав доступа или обменов.</p>
+          </details>
+          <details>
+            <summary>Можете обучить нашего администратора?</summary>
+            <p>Да. Разбираем журналы, права, перезапуск агентов и типовую диагностику вместе с вашим сотрудником, оставляем письменный регламент. Цель — чтобы рутина решалась внутри без нас.</p>
+          </details>
+          <details>
+            <summary>Где хранилища данных и ИИ по звонкам?</summary>
+            <p>Это контур Semper In Motu: данные, хранилища, ALFAKIT SMART, пилоты по показателям. alfakit.by остаётся специалистом по Domino — без смешения тем.</p>
+          </details>
+          <details>
+            <summary>Как запросить оценку модуля?</summary>
+            <p>Каталог — на <a href="modules.html">странице модулей</a>. Опишите систему и модуль в форме ниже или напишите на info@alfakit.by — вернём оценку часов и подходящий пакет.</p>
+          </details>
+          <details>
+            <summary>Что если ключевой разработчик недоступен?</summary>
+            <p>Смотрите раздел «Непрерывность»: документация и исходники в вашем контуре, передача по договору. Это закрывает зависимость от одного человека лучше, чем обещание «команды из двадцати», которой на деле нет.</p>
+          </details>
+          <details>
+            <summary>Можно ли попасть в список ожидания ALFAKIT NEXT?</summary>
+            <p>Да — выберите тему «План NEXT» в форме. Пилот и переключение планируются после аудита процессов и данных, а не «переезд за выходные».</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <section class="section contact" id="contact" aria-labelledby="contact-title">
+      <div class="wrap contact-inner">
+        <h2 id="contact-title">Контакты</h2>
+        <p class="form-status" data-form-status tabindex="-1" hidden>Заявка отправлена. Ответим на указанный адрес.</p>
+        <div class="contact-grid">
+          <div class="contact-info">
+            <p class="contact-name">Виталий Хоружко</p>
+            <p class="contact-lead">Опишите вашу систему на Domino и задачу — вернём оценку, подходящий пакет Care–Scale или консультацию по roadmap NEXT.</p>
+            <ul class="contact-channels">
+              <li><span class="contact-label">Email</span><a href="mailto:info@alfakit.by?subject=ALFAKIT%20Care">info@alfakit.by</a></li>
+              <li><span class="contact-label">Телефон</span><a href="tel:+375296757858">+375&nbsp;29&nbsp;675-78-58</a></li>
+              <li><span class="contact-label">Telegram</span><a href="https://t.me/N_FT210993" target="_blank" rel="noopener noreferrer">Telegram</a></li>
+              <li><span class="contact-label">WhatsApp</span><a href="https://wa.me/375296757858" target="_blank" rel="noopener noreferrer">WhatsApp</a></li>
+              <li><span class="contact-label">LinkedIn</span><a href="https://www.linkedin.com/in/vitalykhoruzhko" target="_blank" rel="noopener noreferrer">linkedin.com/in/vitalykhoruzhko</a></li>
+            </ul>
+            <div class="contact-actions">
+              <button type="button" class="link-copy" data-copy="info@alfakit.by" data-copied-label="Скопировано">Скопировать адрес</button>
+            </div>
+          </div>
+          <form class="lead-form" action="https://formsubmit.co/info@alfakit.by" method="POST">
+            <input type="hidden" name="_subject" value="ALFAKIT Care — заявка" />
+            <input type="hidden" name="_template" value="table" />
+            <input type="hidden" name="_captcha" value="false" />
+            <input type="hidden" name="_next" value="https://alfakit.by/ru/?sent=1#contact" />
+            <input type="text" name="_honey" value="" tabindex="-1" autocomplete="off" aria-hidden="true" style="position:absolute;left:-9999px;height:0;width:0;opacity:0" />
+            <div class="form-row">
+              <label>Имя<input type="text" name="name" required autocomplete="name" /></label>
+              <label>Email<input type="email" name="email" required autocomplete="email" /></label>
+            </div>
+            <label>Компания / система<input type="text" name="company" autocomplete="organization" placeholder="PROLOG / ALFAKIT / другая система на Domino" /></label>
+            <label>Тема
+              <select name="topic" required>
+                <option value="audit">Аудит системы</option>
+                <option value="support">Поддержка и сроки реакции</option>
+                <option value="module">Оценка модуля</option>
+                <option value="process">Оптимизация процесса</option>
+                <option value="upgrade">Обновление версии Domino</option>
+                <option value="package">Пакет Care–Scale</option>
+                <option value="next">План NEXT</option>
+                <option value="other">Другое</option>
+              </select>
+            </label>
+            <label>Задача<textarea name="message" required placeholder="Симптом, роли, срочность P1–P3"></textarea></label>
+            <p class="form-note">Форма отправляет письмо на info@alfakit.by. Данные используем только для ответа на заявку.</p>
+            <div class="form-actions">
+              <button class="btn btn-lg" type="submit">Отправить заявку</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap footer-inner">
+      <p class="footer-brand">ALFAKIT Care · alfakit.by</p>
+      <p class="footer-practice">Практика <a href="https://semperinmotu.com/ru/">Semper In Motu</a></p>
+      <p class="footer-meta">
+        <a href="mailto:info@alfakit.by">info@alfakit.by</a>
+        <span aria-hidden="true">·</span>
+        <a href="tel:+375296757858">+375 29 675-78-58</a>
+        <span aria-hidden="true">·</span>
+        <span>УНП 102176582</span>
+        <span aria-hidden="true">·</span>
+        <a href="../be/" hreflang="be">BE</a>
+        <a href="../" hreflang="en">EN</a>
+        <span aria-hidden="true">·</span>
+        <span>© <span id="year">2026</span></span>
+      </p>
+      <p class="footer-also">Данные и SMART: <a href="https://semperinmotu.com/ru/ops/">semperinmotu.com/ops</a> · Проекты: <a href="https://vitalykhoruzhko.com/ru/">vitalykhoruzhko.com</a></p>
+    </div>
+  </footer>
+  <script type="module" src="../main.js"></script>
+</body>
+</html>

@@ -1,0 +1,148 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>CFO dashboard · ALFAKIT Analytics</title>
+  <meta name="robots" content="noindex,nofollow" />
+  <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=Syne:wght@600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="analytics.css" />
+</head>
+<body>
+  <header class="demo-header">
+    <div class="wrap demo-header-inner">
+      <a class="demo-brand" href="../#reports">ALFAKIT <span>NEXT</span> · Analytics</a>
+      <nav class="demo-nav" aria-label="Demo reports">
+        <a href="index.html">All</a>
+        <a href="ceo.html">CEO</a>
+        <a class="is-active" href="cfo.html" aria-current="page">CFO</a>
+        <a href="transport.html">Ops</a>
+        <a href="shareholders.html">Investors</a>
+        <a href="sales-team.html">Sales</a>
+        <a href="be/cfo.html">BE</a>
+        <a href="ru/cfo.html">RU</a>
+        <a href="../#reports">Site</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="demo-main">
+    <div class="wrap">
+      <div class="demo-hero">
+        <h1>CFO — economics &amp; treasury</h1>
+        <p>Cash position, receivables and payables aging, FX revaluation by payment date, and budget vs actual P&amp;L.</p>
+        <div class="demo-meta">
+          <span class="demo-badge">Demo data</span>
+          <span>Updated: Aug 31, 2026 5:15 PM</span>
+          <span>FX rates as of payment date</span>
+        </div>
+      </div>
+
+      <div class="kpi-grid">
+        <article class="kpi-card">
+          <strong>$1.24M</strong>
+          <span>cash &amp; equivalents</span>
+          <span class="kpi-delta up">+$86K vs Jul 31</span>
+        </article>
+        <article class="kpi-card">
+          <strong>$892K</strong>
+          <span>accounts receivable</span>
+          <span class="kpi-delta up">DSO 42 days</span>
+        </article>
+        <article class="kpi-card">
+          <strong>$618K</strong>
+          <span>accounts payable</span>
+          <span class="kpi-delta flat">DPO 38 days</span>
+        </article>
+        <article class="kpi-card">
+          <strong>−$12.4K</strong>
+          <span>FX impact MTD</span>
+          <span class="kpi-delta down">EUR / PLN exposure</span>
+        </article>
+      </div>
+
+      <div class="split-grid">
+        <section class="panel">
+          <div class="panel-head"><h2>AR aging</h2></div>
+          <div class="bar-chart">
+            <div class="bar-row"><span class="bar-label">Current</span><div class="bar-track"><div class="bar-fill" style="width:62%"></div></div><span class="bar-value">$554K</span></div>
+            <div class="bar-row"><span class="bar-label">1–30 days</span><div class="bar-track"><div class="bar-fill" style="width:22%"></div></div><span class="bar-value">$198K</span></div>
+            <div class="bar-row"><span class="bar-label">31–60 days</span><div class="bar-track"><div class="bar-fill warn" style="width:10%"></div></div><span class="bar-value">$89K</span></div>
+            <div class="bar-row"><span class="bar-label">61–90 days</span><div class="bar-track"><div class="bar-fill bad" style="width:5%"></div></div><span class="bar-value">$38K</span></div>
+            <div class="bar-row"><span class="bar-label">&gt; 90 days</span><div class="bar-track"><div class="bar-fill bad" style="width:3%"></div></div><span class="bar-value">$13K</span></div>
+          </div>
+        </section>
+        <section class="panel">
+          <div class="panel-head"><h2>AP aging</h2></div>
+          <div class="bar-chart">
+            <div class="bar-row"><span class="bar-label">Current</span><div class="bar-track"><div class="bar-fill" style="width:58%"></div></div><span class="bar-value">$358K</span></div>
+            <div class="bar-row"><span class="bar-label">1–30 days</span><div class="bar-track"><div class="bar-fill" style="width:28%"></div></div><span class="bar-value">$173K</span></div>
+            <div class="bar-row"><span class="bar-label">31–60 days</span><div class="bar-track"><div class="bar-fill warn" style="width:12%"></div></div><span class="bar-value">$74K</span></div>
+            <div class="bar-row"><span class="bar-label">61+ days</span><div class="bar-track"><div class="bar-fill bad" style="width:3%"></div></div><span class="bar-value">$13K</span></div>
+          </div>
+        </section>
+      </div>
+
+      <section class="panel">
+        <div class="panel-head"><h2>FX revaluation by payment date (Aug 2026)</h2></div>
+        <div class="table-wrap">
+          <table class="data-table">
+            <thead>
+              <tr>
+                <th>Currency</th>
+                <th class="num">Invoiced (USD eq.)</th>
+                <th class="num">Paid (USD eq.)</th>
+                <th class="num">Rate at invoice</th>
+                <th class="num">Rate at payment</th>
+                <th class="num">FX gain / loss</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td>EUR</td><td class="num">$428K</td><td class="num">$401K</td><td class="num">1.084</td><td class="num">1.091</td><td class="num reason-bad">−$8.2K</td></tr>
+              <tr><td>PLN</td><td class="num">$186K</td><td class="num">$172K</td><td class="num">3.92</td><td class="num">3.88</td><td class="num reason-bad">−$3.1K</td></tr>
+              <tr><td>GBP</td><td class="num">$94K</td><td class="num">$88K</td><td class="num">1.268</td><td class="num">1.271</td><td class="num reason-ok">+$0.4K</td></tr>
+              <tr><td>CNY</td><td class="num">$122K</td><td class="num">$118K</td><td class="num">7.24</td><td class="num">7.22</td><td class="num reason-ok">+$1.5K</td></tr>
+            </tbody>
+            <tfoot>
+              <tr><td colspan="5"><strong>Net MTD</strong></td><td class="num"><strong class="reason-bad">−$12.4K</strong></td></tr>
+            </tfoot>
+          </table>
+        </div>
+      </section>
+
+      <section class="panel">
+        <div class="panel-head"><h2>P&amp;L vs budget (Aug MTD)</h2></div>
+        <div class="table-wrap">
+          <table class="data-table">
+            <thead>
+              <tr>
+                <th>Line item</th>
+                <th class="num">Budget</th>
+                <th class="num">Actual</th>
+                <th class="num">Variance</th>
+                <th class="num">Variance %</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td>Revenue</td><td class="num">$2.28M</td><td class="num">$2.41M</td><td class="num reason-ok">+$130K</td><td class="num"><span class="pill ok">+5.7%</span></td></tr>
+              <tr><td>COGS / buy rates</td><td class="num">$1.86M</td><td class="num">$1.97M</td><td class="num reason-bad">−$110K</td><td class="num"><span class="pill warn">+5.9%</span></td></tr>
+              <tr><td>Gross profit</td><td class="num">$420K</td><td class="num">$444K</td><td class="num reason-ok">+$24K</td><td class="num"><span class="pill ok">+5.7%</span></td></tr>
+              <tr><td>OpEx (sales + G&amp;A)</td><td class="num">$298K</td><td class="num">$291K</td><td class="num reason-ok">+$7K</td><td class="num"><span class="pill ok">−2.3%</span></td></tr>
+              <tr><td>EBITDA</td><td class="num">$122K</td><td class="num">$153K</td><td class="num reason-ok">+$31K</td><td class="num"><span class="pill ok">+25.4%</span></td></tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <p class="demo-note">FX calculated on actual payment date per invoice currency — not period-end revaluation. Overdue AR &gt;60 days: <strong>$51K</strong> across 4 accounts (demo).</p>
+    </div>
+  </main>
+
+  <footer class="demo-footer">
+    <div class="wrap">ALFAKIT NEXT · Analytics demo · <a href="index.html">← all dashboards</a></div>
+  </footer>
+</body>
+</html>

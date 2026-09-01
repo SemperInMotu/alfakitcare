@@ -1,0 +1,761 @@
+<!doctype html>
+<html lang="en" data-lang-root>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>ALFAKIT Care — IBM Domino &amp; HCL Notes support · PROLOG / ALFAKIT TMS</title>
+  <meta name="description" content="Audit, support and customisation for live PROLOG / ALFAKIT on IBM Domino and HCL Notes. SLA packages, modules, TMS reporting. A Semper In Motu practice. info@alfakit.by" />
+  <link rel="canonical" href="https://alfakit.by/" />
+  <link rel="alternate" hreflang="en" href="https://alfakit.by/" />
+  <link rel="alternate" hreflang="ru" href="https://alfakit.by/ru/" />
+  <link rel="alternate" hreflang="be" href="https://alfakit.by/be/" />
+  <link rel="alternate" hreflang="x-default" href="https://alfakit.by/" />
+  <meta name="robots" content="index,follow" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="ALFAKIT Care" />
+  <meta property="og:locale" content="en_US" />
+  <meta property="og:title" content="ALFAKIT Care — Domino TMS support" />
+  <meta property="og:description" content="Audit, support and customisation for live PROLOG / ALFAKIT installations on IBM Domino and HCL Notes." />
+  <meta property="og:url" content="https://alfakit.by/" />
+  <meta property="og:image" content="https://alfakit.by/assets/og-default.jpg" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="ALFAKIT Care — IBM Domino &amp; HCL Notes · TMS" />
+  <meta name="twitter:description" content="Audit and support for live PROLOG / ALFAKIT installations: modules, response targets, NEXT roadmap." />
+  <meta name="twitter:image" content="https://alfakit.by/assets/og-default.jpg" />
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=Syne:wght@600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "ProfessionalService",
+        "@id": "https://alfakit.by/#org",
+        "name": "ALFAKIT Care",
+        "alternateName": "ALFAKIT TMS Support",
+        "url": "https://alfakit.by/",
+        "email": "info@alfakit.by",
+        "telephone": "+375296757858",
+        "image": "https://alfakit.by/assets/og-default.jpg",
+        "description": "Audit, support and customisation for live PROLOG / ALFAKIT installations on IBM Domino and HCL Notes.",
+        "parentOrganization": {
+          "@type": "Organization",
+          "name": "Semper In Motu",
+          "url": "https://semperinmotu.com/"
+        },
+        "areaServed": ["BY", "RU", "EU", "US"],
+        "sameAs": [
+          "https://www.linkedin.com/in/vitalykhoruzhko",
+          "https://semperinmotu.com/",
+          "https://vitalykhoruzhko.com/"
+        ],
+        "knowsAbout": ["IBM Domino", "HCL Notes", "TMS", "PROLOG", "ALFAKIT", "LotusScript"]
+      },
+      {
+        "@type": "WebSite",
+        "@id": "https://alfakit.by/#website",
+        "url": "https://alfakit.by/",
+        "name": "ALFAKIT Care",
+        "publisher": { "@id": "https://alfakit.by/#org" },
+        "inLanguage": ["en", "ru", "be"]
+      },
+      {
+        "@type": "FAQPage",
+        "@id": "https://alfakit.by/#faq",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "Do you replace our IBM Domino or HCL Notes?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "No. We support and customise the live installation. ALFAKIT NEXT is a phased roadmap, not a blind core replacement."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Do you offer an audit of the current installation as a service?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. A system audit costs from EUR 900 and takes 5-10 business days. You receive a written report, a risk register, an inventory of customisations and a prioritised work list. The fee is credited against a support agreement signed within 30 days."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How much does Domino support cost?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Indicative: Care from EUR 750 per month, Growth from EUR 1800, Scale from EUR 3500, Incident from EUR 350. Final pricing follows the system audit."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What response times do you commit to?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "P1 within 2 business hours for first response, P2 within 4 business hours, P3 within 1 business day. Support hours and escalation are fixed in the package agreement (SLA)."
+            }
+          }
+        ]
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <div class="lang-hint" data-lang-hint hidden>
+    <div class="wrap lang-hint-inner">
+      <p data-lang-hint-text></p>
+      <a class="btn btn-sm" href="#" data-lang-hint-go>Switch</a>
+      <button type="button" class="lang-hint-close" data-lang-hint-close aria-label="Dismiss">×</button>
+    </div>
+  </div>
+  <header class="site-header">
+    <div class="wrap header-inner">
+      <a class="brand" href="#top">ALFAKIT <span class="brand-dot">Care</span></a>
+      <nav class="nav" aria-label="Sections">
+        <a href="#platform">Platform</a>
+        <a href="#audit">Audit</a>
+        <a href="#functions">Modules</a>
+        <a href="#packages">Packages</a>
+        <a href="#cases">Cases</a>
+        <a href="#faq">FAQ</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <div class="header-actions">
+        <nav class="lang-switch" aria-label="Language" data-lang-switch><span class="lang-current" aria-current="page">EN</span><a href="ru/" hreflang="ru">RU</a><a href="be/" hreflang="be">BE</a></nav>
+        <a class="btn btn-sm" href="#contact">Contact</a>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero" id="top" aria-labelledby="hero-brand">
+      <div class="hero-visual" aria-hidden="true">
+        <svg class="hero-routes" viewBox="0 0 1440 900" preserveAspectRatio="xMidYMid slice">
+          <defs>
+            <linearGradient id="routeGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" stop-color="#6a9bb0" stop-opacity="0.55" />
+              <stop offset="100%" stop-color="#c4d4de" stop-opacity="0.15" />
+            </linearGradient>
+          </defs>
+          <g class="route-layer" fill="none" stroke="url(#routeGrad)" stroke-width="1.25">
+            <path d="M-40 620 C 180 480, 320 720, 520 540 S 880 280, 1100 420 S 1380 680, 1520 520" />
+            <path d="M-20 240 C 220 180, 400 360, 640 220 S 980 80, 1220 200 S 1400 360, 1500 280" />
+            <path d="M80 780 C 300 640, 480 820, 700 660 S 1040 500, 1280 620 S 1460 780, 1600 700" />
+          </g>
+          <g class="node-layer" fill="#6a9bb0">
+            <circle cx="520" cy="540" r="5" opacity="0.85" />
+            <circle cx="1100" cy="420" r="6" opacity="0.9" />
+            <circle cx="700" cy="660" r="5" opacity="0.75" />
+          </g>
+        </svg>
+        <div class="hero-grid"></div>
+      </div>
+      <div class="wrap hero-content">
+        <p class="hero-brand" id="hero-brand">ALFAKIT Care</p>
+        <h1 class="hero-title">Domino TMS support for freight forwarders</h1>
+        <p class="hero-lead">
+          Live PROLOG / ALFAKIT on IBM Domino and HCL Notes: customisation, SLA-backed
+          support, modules and reporting. Practice: Semper In Motu.
+        </p>
+        <div class="hero-cta">
+          <a class="btn" href="#contact">Discuss a task</a>
+          <a class="btn btn-ghost" href="#audit">System audit</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section platform" id="platform" aria-labelledby="platform-title">
+      <div class="wrap">
+        <p class="section-kicker">Platform</p>
+        <h2 id="platform-title">Two tracks, one expertise</h2>
+        <p class="section-lead">Customising the live TMS/CRM on Domino. The ALFAKIT NEXT roadmap is a separate phased track — not a prerequisite for Care.</p>
+        <div class="dual-grid">
+          <article class="dual-block">
+            <h3>Legacy Domino</h3>
+            <p class="dual-sub">IBM Domino &amp; HCL Notes · PROLOG / ALFAKIT</p>
+            <ul class="platform-points compact">
+              <li>LotusScript and Java agents, forms, views, ACL, NSF databases</li>
+              <li>Integrations: ERP and 1C, e-invoicing, CSV/Excel, BI, HTTP API</li>
+              <li>Server load, agent scheduling, backup routines</li>
+              <li>Targeted changes on a live installation</li>
+            </ul>
+          </article>
+          <article class="dual-block dual-next">
+            <h3>ALFAKIT NEXT roadmap</h3>
+            <p class="dual-sub">A modern multi-tenant platform</p>
+            <ul class="platform-points compact">
+              <li>Moving processes and data off Domino without losing history</li>
+              <li>API-first, incremental strangler pattern, parallel run</li>
+              <li>BI exports and integrations that preserve operational history</li>
+              <li>Sequence: audit → pilot → cutover by domain</li>
+            </ul>
+          </article>
+        </div>
+        <p class="bridge-note">
+          Data, DWH, ALFAKIT SMART and KPI pilots —
+          <a href="https://semperinmotu.com/ops/" rel="noopener">Semper In Motu · Ops</a>.
+          This site covers Domino TMS Care only.
+        </p>
+      </div>
+    </section>
+
+    <section class="section audit" id="audit" aria-labelledby="audit-title">
+      <div class="wrap">
+        <p class="section-kicker">Start here</p>
+        <h2 id="audit-title">System audit</h2>
+        <p class="section-lead">A paid, fixed-scope review of your live installation. The deliverable is a written report you keep — even if we never sign a support agreement.</p>
+        <div class="support-grid">
+          <article class="support-item">
+            <h3>What we inspect</h3>
+            <p>Server load and heavy views, agent queues and schedules, access rights, integrations with external systems, and undocumented customisations left by previous contractors.</p>
+          </article>
+          <article class="support-item">
+            <h3>What you receive</h3>
+            <p>A written report, a risk register with impact assessment, an inventory of customisations and dependencies, and a prioritised work list estimated in hours.</p>
+          </article>
+          <article class="support-item">
+            <h3>Price and duration</h3>
+            <p>From €900, 5–10 business days depending on the size of the installation. The fee is credited against a support agreement signed within 30 days.</p>
+          </article>
+          <article class="support-item">
+            <h3>Why it works this way</h3>
+            <p>An honest estimate is impossible without looking inside. The audit replaces guesswork with a document — and gives you leverage with any contractor, not only with us.</p>
+          </article>
+        </div>
+        <p class="package-note">The audit carries no obligation to buy support. Request it via the <a href="#contact">form below</a>, topic “System audit”.</p>
+      </div>
+    </section>
+
+    <section class="section bpr" id="bpr" aria-labelledby="bpr-title">
+      <div class="wrap">
+        <p class="section-kicker">Process</p>
+        <h2 id="bpr-title">Process optimisation</h2>
+        <p class="section-lead">First we rebuild how the company actually works — then we encode it in the TMS/CRM. Automating a broken process only accelerates the chaos.</p>
+        <div class="bpr-steps">
+          <article>
+            <h3>As-is → to-be</h3>
+            <p>Flow map (request → quotation → deal → documents → payment), bottlenecks and logic hidden in agents and spreadsheets.</p>
+          </article>
+          <article>
+            <h3>Roles and decisions</h3>
+            <p>Who sees what, where approval sits and what the response target is; we remove redundant loops before touching forms and ACL.</p>
+          </article>
+          <article>
+            <h3>Rollout into the system</h3>
+            <p>Views, agents, forms and reports rebuilt for the target process design. Pilot first, then a phased rollout with user acceptance.</p>
+          </article>
+          <article>
+            <h3>Metrics</h3>
+            <p>Control cuts in BI: response time, margin, open deals — so the process does not quietly roll back.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section products" id="functions" aria-labelledby="functions-title">
+      <div class="wrap">
+        <p class="section-kicker">Customisation</p>
+        <h2 id="functions-title">Customisation clusters</h2>
+        <p class="section-lead">Four directions. The full module catalogue lives on a separate page.</p>
+        <div class="cluster-grid">
+          <article class="cluster">
+            <h3>Finance</h3>
+            <p>ERP and payment integration, e-invoicing documents, multi-currency exports, shipment economics, receivables and payables.</p>
+          </article>
+          <article class="cluster">
+            <h3>Sales</h3>
+            <p>Requests and quotations, account owners and bonuses, rates, response targets, plan versus actual.</p>
+          </article>
+          <article class="cluster">
+            <h3>Operations</h3>
+            <p>Print forms, customs, views and filters, contract discipline, performance.</p>
+          </article>
+          <article class="cluster">
+            <h3>Access</h3>
+            <p>Manager, forwarder, account owner, head and accountant roles; ACL, onboarding and offboarding.</p>
+          </article>
+        </div>
+        <p class="cluster-cta"><a class="btn" href="modules.html">Module catalogue</a></p>
+      </div>
+    </section>
+
+    <section class="section products products-alt" id="reports" aria-labelledby="reports-title">
+      <div class="wrap">
+        <p class="section-kicker">Analytics</p>
+        <h2 id="reports-title">Reports and dashboards</h2>
+        <p class="section-lead">Role-based reports and exports out of the installation (Excel / QlikView / Power BI). A full warehouse and self-service marts live at <a href="https://semperinmotu.com/ops/data.html">Semper In Motu · Data</a>.</p>
+        <div class="dash-grid">
+          <figure class="dash-figure dash-figure-live">
+            <div class="dash-preview">
+              <p class="dash-preview-kicker">CEO</p>
+              <h3 class="dash-preview-title">Business health</h3>
+              <p class="dash-preview-lead">Revenue, margin, pipeline and SLA — month-to-date executive view.</p>
+              <div class="dash-preview-links">
+                <a class="btn btn-sm" href="analytics/ceo.html">Open demo</a>
+                <a class="btn btn-sm btn-ghost" href="analytics/index.html">All dashboards</a>
+              </div>
+            </div>
+            <figcaption><strong>CEO</strong> — revenue, profit, open deals, response compliance</figcaption>
+          </figure>
+          <figure class="dash-figure dash-figure-live">
+            <div class="dash-preview">
+              <p class="dash-preview-kicker">CFO</p>
+              <h3 class="dash-preview-title">Economics &amp; treasury</h3>
+              <p class="dash-preview-lead">Cash, AR/AP aging, FX by payment date, budget vs actual.</p>
+              <div class="dash-preview-links">
+                <a class="btn btn-sm" href="analytics/cfo.html">Open demo</a>
+              </div>
+            </div>
+            <figcaption><strong>CFO</strong> — economics, receivables and payables, FX by payment date</figcaption>
+          </figure>
+          <figure class="dash-figure dash-figure-live">
+            <div class="dash-preview">
+              <p class="dash-preview-kicker">Sales director</p>
+              <h3 class="dash-preview-title">Sales plan and funnel</h3>
+              <p class="dash-preview-lead">Team summary and individual manager plan — demo with anonymised sample data.</p>
+              <div class="dash-preview-links">
+                <a class="btn btn-sm" href="analytics/sales-team.html">All sellers</a>
+                <a class="btn btn-sm btn-ghost" href="analytics/sales-manager.html">One manager</a>
+              </div>
+            </div>
+            <figcaption><strong>Sales director</strong> — plan vs actual for calls, quotes, contracts and deals</figcaption>
+          </figure>
+          <figure class="dash-figure dash-figure-live">
+            <div class="dash-preview">
+              <p class="dash-preview-kicker">Transportation</p>
+              <h3 class="dash-preview-title">Operations control</h3>
+              <p class="dash-preview-lead">Active loads, on-time %, carriers, lane utilization and exceptions.</p>
+              <div class="dash-preview-links">
+                <a class="btn btn-sm" href="analytics/transport.html">Open demo</a>
+              </div>
+            </div>
+            <figcaption><strong>Transportation head</strong> — dispatch board, carriers, delays and customs holds</figcaption>
+          </figure>
+          <figure class="dash-figure dash-figure-live">
+            <div class="dash-preview">
+              <p class="dash-preview-kicker">Shareholders</p>
+              <h3 class="dash-preview-title">Investor summary</h3>
+              <p class="dash-preview-lead">Growth, EBITDA, ROE, dividends and quarterly results.</p>
+              <div class="dash-preview-links">
+                <a class="btn btn-sm" href="analytics/shareholders.html">Open demo</a>
+              </div>
+            </div>
+            <figcaption><strong>Shareholders</strong> — board-ready pack without operational drill-down</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <section class="section support" id="support" aria-labelledby="support-title">
+      <div class="wrap">
+        <p class="section-kicker">Service</p>
+        <h2 id="support-title">Administration and SLA</h2>
+        <p class="section-lead">Server load, agent orchestration and an incident priority matrix.</p>
+        <div class="support-grid">
+          <article class="support-item">
+            <h3>Load management</h3>
+            <p>Heavy views, indexing, DAOS, disk separation, capping report peaks.</p>
+          </article>
+          <article class="support-item">
+            <h3>Agent orchestration</h3>
+            <p>AMgr schedules, execution order, logs, stuck queues, server agents per database.</p>
+          </article>
+          <article class="support-item">
+            <h3>Rights and backup</h3>
+            <p>ACL, offboarding, NSF and DAOS, comparison against the backup, separate test and production tracks.</p>
+          </article>
+          <article class="support-item">
+            <h3>LotusScript and Java</h3>
+            <p>Agent diagnostics, form and view changes, regression checks on critical documents.</p>
+          </article>
+        </div>
+        <h3 class="subsection-title">SLA matrix</h3>
+        <div class="sla-table-wrap">
+          <table class="sla-table">
+            <thead>
+              <tr><th>Priority</th><th>When</th><th>First response</th><th>Recovery target</th></tr>
+            </thead>
+            <tbody>
+              <tr><td><strong>P1</strong></td><td>Production down or operations blocked at scale</td><td>≤ 2 business hours</td><td>Same day or workaround</td></tr>
+              <tr><td><strong>P2</strong></td><td>Critical process degraded</td><td>≤ 4 business hours</td><td>≤ 2 business days</td></tr>
+              <tr><td><strong>P3</strong></td><td>Non-blocking defect, enhancement</td><td>≤ 1 business day</td><td>Per agreed plan</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="package-note">Support window and escalation are fixed in the package agreement. 24/7 is an option on top of Scale.</p>
+      </div>
+    </section>
+
+    <section class="section legacy" id="legacy" aria-labelledby="legacy-title">
+      <div class="wrap">
+        <p class="section-kicker">Resilience</p>
+        <h2 id="legacy-title">Reducing legacy risk</h2>
+        <p class="section-lead">A system that is 10–20 years old fails in predictable ways. Below are the jobs almost nobody buys until an outage forces them to.</p>
+        <div class="support-grid">
+          <article class="support-item">
+            <h3>Restore drill</h3>
+            <p>We restore your backup into a test environment and measure how long it takes. “Backups are running” and “restore works” are different claims, and only the second one is provable.</p>
+          </article>
+          <article class="support-item">
+            <h3>Test environment</h3>
+            <p>Many installations simply do not have one: changes go straight into production. We separate the test and production tracks so releases stop being a lottery.</p>
+          </article>
+          <article class="support-item">
+            <h3>Customisation inventory</h3>
+            <p>We reverse-document what previous developers left behind: what each agent does, where its data comes from, and what breaks if you switch it off.</p>
+          </article>
+          <article class="support-item">
+            <h3>Versions and licensing</h3>
+            <p>The upgrade path for IBM Domino and HCL Notes, the licensing model, what stops working on the way and in which order to fix it.</p>
+          </article>
+          <article class="support-item">
+            <h3>Enabling your own admin</h3>
+            <p>We hand routine work to your team: logs, rights, agent restarts, standard diagnostics. Our goal is that you call us less often, not more.</p>
+          </article>
+          <article class="support-item">
+            <h3>Exit plan</h3>
+            <p>Sources, data exports and documentation stay with you. Leaving a contractor has to be technically possible — otherwise it is not support, it is hostage-taking.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section packages" id="packages" aria-labelledby="packages-title">
+      <div class="wrap">
+        <p class="section-kicker">Retainer</p>
+        <h2 id="packages-title">Monthly support</h2>
+        <p class="section-lead">A retainer with committed response times, an hour bank and an annual discount. Final pricing follows the system audit. Prices are indicative and do not constitute a public offer.</p>
+        <div class="package-grid package-grid-4">
+          <article class="package">
+            <h3>Care</h3>
+            <p class="package-price">from €750<span>/mo</span></p>
+            <p class="package-tag">Stabilisation</p>
+            <ul>
+              <li>~8–12 hours per month</li>
+              <li>P2–P3, response within the business day</li>
+              <li>Small changes to rights, views, agents</li>
+            </ul>
+          </article>
+          <article class="package package-featured">
+            <h3>Growth</h3>
+            <p class="package-price">from €1,800<span>/mo</span></p>
+            <p class="package-tag">Development</p>
+            <ul>
+              <li>~20–30 hours per month</li>
+              <li>P1–P3 targets per agreement</li>
+              <li>Health check plus 1–2 small releases</li>
+            </ul>
+          </article>
+          <article class="package">
+            <h3>Scale</h3>
+            <p class="package-price">from €3,500<span>/mo</span></p>
+            <p class="package-tag">Domino Ops</p>
+            <ul>
+              <li>~40–60 hours per month</li>
+              <li>Agent orchestration and server load</li>
+              <li>BI exports plus a quarterly process review</li>
+            </ul>
+          </article>
+          <article class="package">
+            <h3>Incident</h3>
+            <p class="package-price">from €350<span>/mo</span></p>
+            <p class="package-tag">Incidents only</p>
+            <ul>
+              <li>Priority queue without a development bank</li>
+              <li>P1–P2 at Care targets</li>
+              <li>Extra hours billed separately</li>
+            </ul>
+          </article>
+        </div>
+        <div class="price-box">
+          <h3>One-off engagements</h3>
+          <ul class="price-list">
+            <li><strong>System audit</strong> — from €900 (credited against a contract)</li>
+            <li><strong>10 hours</strong> — from €700</li>
+            <li><strong>25 hours</strong> — from €1,600</li>
+            <li><strong>50 hours</strong> — from €3,000</li>
+          </ul>
+          <p class="package-note">Annual contract prepaid for 12 months: −10…15% off the monthly Care / Growth / Scale rate. Large modules sit outside the retainer. Warehousing and AI projects run through <a href="https://semperinmotu.com/ops/data.html">Semper In Motu</a>.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section audience" id="audience" aria-labelledby="audience-title">
+      <div class="wrap">
+        <h2 id="audience-title">Who this is for</h2>
+        <div class="dual-grid">
+          <article class="dual-block">
+            <h3>Logistics TMS</h3>
+            <ul class="audience-list">
+              <li>Forwarders and carriers on PROLOG / ALFAKIT</li>
+              <li>Finance, sales, customs, dispatch</li>
+              <li>Needing customisation, reporting and a stable Domino</li>
+            </ul>
+          </article>
+          <article class="dual-block">
+            <h3>Other Domino estates</h3>
+            <ul class="audience-list">
+              <li>Companies on IBM Domino / HCL Notes outside pure logistics</li>
+              <li>Document flow, CRM, industry-specific NSF databases</li>
+              <li>Integrations, load, migration to NEXT</li>
+            </ul>
+          </article>
+        </div>
+        <p class="stack-title">Core stack (Domino TMS)</p>
+        <ul class="stack-list">
+          <li>IBM Domino · HCL Notes</li>
+          <li>LotusScript · Java agents · Formula</li>
+          <li>HTTP API · CSV / Excel · ERP and 1C · e-invoicing</li>
+          <li>Exports to QlikView / Power BI</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section cases" id="cases" aria-labelledby="cases-title">
+      <div class="wrap">
+        <h2 id="cases-title">Cases</h2>
+        <p class="section-lead">Anonymised. Format: problem → action → result.</p>
+        <ol class="case-list">
+          <li class="case">
+            <h3>Payment import from the accounting system</h3>
+            <p><strong>Problem:</strong> duplicates and truncated invoices when loading multiple currencies.<br />
+            <strong>Action:</strong> CSV exchange, import configurations, tests against real bank statements.<br />
+            <strong>Result:</strong> customer payment import confirmed on production accounts.</p>
+          </li>
+          <li class="case">
+            <h3>E-invoicing documents</h3>
+            <p><strong>Problem:</strong> the XML failed the operator’s validation.<br />
+            <strong>Action:</strong> templates plus checks on company details and regions.<br />
+            <strong>Result:</strong> documents accepted by the e-invoicing operator.</p>
+          </li>
+          <li class="case">
+            <h3>Reporting for CFO, sales and CEO</h3>
+            <p><strong>Problem:</strong> the only cuts available were heavy TMS views.<br />
+            <strong>Action:</strong> daily exports into QlikView, response time in hours, role-based scenarios.<br />
+            <strong>Result:</strong> separate dashboards for finance, sales and management.</p>
+          </li>
+          <li class="case">
+            <h3>Dispatcher and manager roles</h3>
+            <p><strong>Problem:</strong> staff could see other people’s deals and processes were blocked.<br />
+            <strong>Action:</strong> role model, ACL, targeted rights restoration.<br />
+            <strong>Result:</strong> access and processes match the org chart again.</p>
+          </li>
+          <li class="case">
+            <h3>Quotation process optimisation</h3>
+            <p><strong>Problem:</strong> requests were lost between departments and response time was never measured.<br />
+            <strong>Action:</strong> as-is and to-be design, queue roles, a response standard, export into BI.<br />
+            <strong>Result:</strong> a transparent queue and handling time measured in hours.</p>
+          </li>
+          <li class="case">
+            <h3>TMS export into management reporting</h3>
+            <p><strong>Problem:</strong> manual Excel assembly across several parts of the installation, mismatched keys.<br />
+            <strong>Action:</strong> stable export agents out of Domino, agreed fields for finance and sales.<br />
+            <strong>Result:</strong> daily cuts without manual stitching. A full warehouse from any source runs at <a href="https://semperinmotu.com/ops/data.html">Semper In Motu</a>.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="section process" id="process" aria-labelledby="process-title">
+      <div class="wrap">
+        <h2 id="process-title">How we work</h2>
+        <ol class="process-list">
+          <li><span class="process-step">01</span><div><h3>Triage</h3><p>Symptom, roles, process or a P1–P3 incident.</p></div></li>
+          <li><span class="process-step">02</span><div><h3>Estimate</h3><p>Live installation, data sources, NEXT roadmap.</p></div></li>
+          <li><span class="process-step">03</span><div><h3>Delivery</h3><p>A module, a report, a support package or a process change inside the system.</p></div></li>
+          <li><span class="process-step">04</span><div><h3>Acceptance</h3><p>On real data, then into steady-state support.</p></div></li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="section data-platform" id="bridge" aria-labelledby="bridge-title">
+      <div class="wrap">
+        <p class="section-kicker">Adjacent work</p>
+        <h2 id="bridge-title">Data, AI and the agency</h2>
+        <p class="section-lead">
+          alfakit.by is the Domino TMS specialist. Data and AI live at the Semper In Motu agency. The full project portfolio is on <a href="https://vitalykhoruzhko.com/">vitalykhoruzhko.com</a>.
+        </p>
+        <div class="support-grid">
+          <article class="support-item">
+            <h3>Data: lake, warehouse, marts</h3>
+            <p>Warehouses and marts from any source, with source discovery before the project.</p>
+            <p class="product-who"><a href="https://semperinmotu.com/ops/data.html">semperinmotu.com/ops/data →</a></p>
+          </article>
+          <article class="support-item">
+            <h3>AI, SMART and pilots</h3>
+            <p>Conversation intelligence and KPI pilots on top of the operational system.</p>
+            <p class="product-who"><a href="https://semperinmotu.com/ops/">semperinmotu.com/ops →</a></p>
+          </article>
+          <article class="support-item">
+            <h3>Heritavia</h3>
+            <p>Documented family history — a separate service.</p>
+            <p class="product-who"><a href="https://heritavia.vitalykhoruzhko.com/">heritavia.vitalykhoruzhko.com →</a></p>
+          </article>
+          <article class="support-item">
+            <h3>Project portfolio</h3>
+            <p>Everything in one hub: ALFAKIT · Semper · Heritavia.</p>
+            <p class="product-who"><a href="https://vitalykhoruzhko.com/">vitalykhoruzhko.com →</a></p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section continuity" id="continuity" aria-labelledby="continuity-title">
+      <div class="wrap">
+        <p class="section-kicker">Executive risk</p>
+        <h2 id="continuity-title">Continuity and handover</h2>
+        <p class="section-lead">A critical TMS must not depend on “one person who keeps it all in their head”. We put the artefacts inside your perimeter.</p>
+        <ul class="continuity-grid">
+          <li>
+            <h3>Contract and scope before we start</h3>
+            <p>The Care–Scale package, the priority matrix and the scope boundary are in the agreement. “One more field” is a change request, not a surprise on the invoice.</p>
+          </li>
+          <li>
+            <h3>Documentation stays with you</h3>
+            <p>The runbook for agents and rights, the list of customisations and incident decisions live in your repository (Confluence, an internal wiki or an NSF database).</p>
+          </li>
+          <li>
+            <h3>Artefact handover</h3>
+            <p>Sources for agents, forms and export scripts plus a restore procedure, on request within the contract. No vendor lock behind a closed binary.</p>
+          </li>
+          <li>
+            <h3>P1–P3 escalation</h3>
+            <p>Priorities and targets are in the agreement. 24/7 is an option on top of Scale. Legal entity details and a contract template on request to info@alfakit.by.</p>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section faq" id="faq" aria-labelledby="faq-title">
+      <div class="wrap">
+        <p class="section-kicker">FAQ</p>
+        <h2 id="faq-title">Frequent questions</h2>
+        <div class="faq-list">
+          <details>
+            <summary>Do you replace our IBM Domino or HCL Notes?</summary>
+            <p>No. We support and customise the live installation. ALFAKIT NEXT is a phased roadmap, not a blind core replacement. A big-bang migration is not our default proposal.</p>
+          </details>
+          <details>
+            <summary>Do you offer an audit of the current installation as a service?</summary>
+            <p>Yes, and it is the usual way to start. From €900, 5–10 business days. You get a written report, a risk register, an inventory of customisations and a prioritised work list estimated in hours. The fee is credited against a support agreement signed within 30 days, and the report is yours either way. See <a href="#audit">System audit</a>.</p>
+          </details>
+          <details>
+            <summary>How much does support cost?</summary>
+            <p>Indicative: Care from €750/mo, Growth from €1,800, Scale from €3,500, Incident from €350. Final pricing follows the system audit. The hour bank and the −10…15% annual discount are in the packages block.</p>
+          </details>
+          <details>
+            <summary>What is covered by the SLA?</summary>
+            <p>P1 within 2 business hours for first response, P2 within 4 business hours, P3 within 1 business day. Recovery targets are in the matrix above. Support hours and escalation are fixed in the package agreement.</p>
+          </details>
+          <details>
+            <summary>Can you upgrade Domino to a current version?</summary>
+            <p>Yes, as a separate engagement: audit and customisation inventory first, then the upgrade in a test environment, verification of agents and integrations, and only then production. We also review the HCL licensing model — it can often be simplified and made cheaper.</p>
+          </details>
+          <details>
+            <summary>Do you only work with PROLOG and ALFAKIT?</summary>
+            <p>The main focus is logistics TMS on Domino. We also take other NSF, CRM and document-flow estates on IBM Domino / HCL Notes when the work sits in LotusScript, Java, ACL or integrations.</p>
+          </details>
+          <details>
+            <summary>Can you train our administrator?</summary>
+            <p>Yes. We walk through logs, rights, agent restarts and standard diagnostics together with your staff and leave a written runbook. The point is that routine work stays inside your team.</p>
+          </details>
+          <details>
+            <summary>Where do data warehousing and call AI sit?</summary>
+            <p>In the Semper In Motu track: data, warehouses, ALFAKIT SMART, KPI pilots. alfakit.by stays the Domino specialist without mixing the two.</p>
+          </details>
+          <details>
+            <summary>How do I request a module estimate?</summary>
+            <p>The catalogue is on the <a href="modules.html">modules page</a>. Describe your installation and the module in the form below or write to info@alfakit.by — we return an hour estimate and a matching package.</p>
+          </details>
+          <details>
+            <summary>What if the key developer is unavailable?</summary>
+            <p>See the continuity block: documentation and sources inside your perimeter, handover per contract. That covers the bus-factor question better than promising a “team of twenty” that does not exist.</p>
+          </details>
+          <details>
+            <summary>Can we join the ALFAKIT NEXT waitlist?</summary>
+            <p>Yes — pick the “NEXT roadmap” topic in the form. The pilot and cutover are planned after a process and data audit, not as a weekend move.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <section class="section contact" id="contact" aria-labelledby="contact-title">
+      <div class="wrap contact-inner">
+        <h2 id="contact-title">Contact</h2>
+        <p class="form-status" data-form-status tabindex="-1" hidden>Message sent. We will reply to the address you provided.</p>
+        <div class="contact-grid">
+          <div class="contact-info">
+            <p class="contact-name">Vitaly Khoruzhko</p>
+            <p class="contact-lead">Describe your Domino installation and the task — you get an estimate, a matching Care–Scale package or a roadmap consultation for NEXT.</p>
+            <ul class="contact-channels">
+              <li><span class="contact-label">Email</span><a href="mailto:info@alfakit.by?subject=ALFAKIT%20Care">info@alfakit.by</a></li>
+              <li><span class="contact-label">Phone</span><a href="tel:+375296757858">+375&nbsp;29&nbsp;675-78-58</a></li>
+              <li><span class="contact-label">Telegram</span><a href="https://t.me/N_FT210993" target="_blank" rel="noopener noreferrer">Telegram</a></li>
+              <li><span class="contact-label">WhatsApp</span><a href="https://wa.me/375296757858" target="_blank" rel="noopener noreferrer">WhatsApp</a></li>
+              <li><span class="contact-label">LinkedIn</span><a href="https://www.linkedin.com/in/vitalykhoruzhko" target="_blank" rel="noopener noreferrer">linkedin.com/in/vitalykhoruzhko</a></li>
+            </ul>
+            <div class="contact-actions">
+              <button type="button" class="link-copy" data-copy="info@alfakit.by" data-copied-label="Copied">Copy email</button>
+            </div>
+          </div>
+          <form class="lead-form" action="https://formsubmit.co/info@alfakit.by" method="POST">
+            <input type="hidden" name="_subject" value="ALFAKIT Care — enquiry" />
+            <input type="hidden" name="_template" value="table" />
+            <input type="hidden" name="_captcha" value="false" />
+            <input type="hidden" name="_next" value="https://alfakit.by/?sent=1#contact" />
+            <input type="text" name="_honey" value="" tabindex="-1" autocomplete="off" aria-hidden="true" style="position:absolute;left:-9999px;height:0;width:0;opacity:0" />
+            <div class="form-row">
+              <label>Name<input type="text" name="name" required autocomplete="name" /></label>
+              <label>Email<input type="email" name="email" required autocomplete="email" /></label>
+            </div>
+            <label>Company / installation<input type="text" name="company" autocomplete="organization" placeholder="PROLOG / ALFAKIT / other Domino" /></label>
+            <label>Topic
+              <select name="topic" required>
+                <option value="audit">System audit</option>
+                <option value="support">Support and response times</option>
+                <option value="module">Module estimate</option>
+                <option value="process">Process optimisation</option>
+                <option value="upgrade">Domino version upgrade</option>
+                <option value="package">Care–Scale package</option>
+                <option value="next">NEXT roadmap</option>
+                <option value="other">Other</option>
+              </select>
+            </label>
+            <label>Task<textarea name="message" required placeholder="Symptom, roles, urgency P1–P3"></textarea></label>
+            <p class="form-note">The form sends an email to info@alfakit.by. We use your data only to answer the enquiry.</p>
+            <div class="form-actions">
+              <button class="btn btn-lg" type="submit">Send enquiry</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap footer-inner">
+      <p class="footer-brand">ALFAKIT Care · alfakit.by</p>
+      <p class="footer-practice">A <a href="https://semperinmotu.com/">Semper In Motu</a> practice</p>
+      <p class="footer-meta">
+        <a href="mailto:info@alfakit.by">info@alfakit.by</a>
+        <span aria-hidden="true">·</span>
+        <a href="tel:+375296757858">+375 29 675-78-58</a>
+        <span aria-hidden="true">·</span>
+        <span>UNP 102176582</span>
+        <span aria-hidden="true">·</span>
+        <a href="ru/" hreflang="ru">RU</a>
+        <a href="be/" hreflang="be">BE</a>
+        <span aria-hidden="true">·</span>
+        <span>© <span id="year">2026</span></span>
+      </p>
+      <p class="footer-also">Data &amp; SMART: <a href="https://semperinmotu.com/ops/">semperinmotu.com/ops</a> · Projects: <a href="https://vitalykhoruzhko.com/">vitalykhoruzhko.com</a></p>
+    </div>
+  </footer>
+  <script type="module" src="main.js"></script>
+</body>
+</html>

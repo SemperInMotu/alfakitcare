@@ -1,0 +1,483 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Индивидуальный план — Анастасия Хоружко · ALFAKIT Analytics</title>
+  <meta name="robots" content="noindex,nofollow" />
+  <link rel="icon" href="../../assets/favicon.svg" type="image/svg+xml" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=Syne:wght@600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../analytics.css" />
+</head>
+<body>
+  <header class="demo-header">
+    <div class="wrap demo-header-inner">
+      <a class="demo-brand" href="../../ru/#reports">ALFAKIT <span>NEXT</span> · Analytics</a>
+      <nav class="demo-nav" aria-label="Демо-отчёты">
+        <a href="index.html">Все</a>
+        <a href="ceo.html">CEO</a>
+        <a href="cfo.html">CFO</a>
+        <a href="transport.html">Транспорт</a>
+        <a href="shareholders.html">Акционеры</a>
+        <a class="is-active" href="sales-team.html">Продажи</a>
+        <a href="sales-manager.html">Менеджер</a>
+        <a href="../be/sales-manager.html">BE</a>
+        <a href="../sales-manager.html">EN</a>
+        <a href="../../ru/#reports">Сайт</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="demo-main">
+    <div class="wrap">
+      <div class="demo-hero">
+        <h1>Индивидуальный план продаж</h1>
+        <p>Детализация воронки одного клиент-менеджера: план, факт, прогноз и веса показателей. Веса пересчитаны: исходные 10 / 5 / 5 / 80 ×&nbsp;1,5 → нормированы до 100%.</p>
+        <div class="demo-meta">
+          <span class="demo-badge">Демо-данные</span>
+          <span>Обновлено: 31.08.2026 07:32</span>
+          <span>Клиент-менеджер: <strong>Анастасия Хоружко</strong></span>
+          <span>Период: 08.2026</span>
+        </div>
+      </div>
+
+      <div class="kpi-grid">
+        <article class="kpi-card">
+          <strong>84,7%</strong>
+          <span>итого по воронке</span>
+        </article>
+        <article class="kpi-card">
+          <strong>84,7%</strong>
+          <span>прогноз на конец месяца</span>
+        </article>
+        <article class="kpi-card">
+          <strong>0</strong>
+          <span>дней отсутствия</span>
+        </article>
+        <article class="kpi-card">
+          <strong>Куратор</strong>
+          <span>категория · стаж 7 мес.</span>
+        </article>
+      </div>
+
+      <section class="panel" aria-labelledby="funnel-title">
+        <div class="panel-head">
+          <h2 id="funnel-title">Показатели воронки</h2>
+          <div class="panel-tools">
+            <select aria-label="Менеджер">
+              <option selected>Анастасия Хоружко</option>
+              <option>Антон Мухаровский</option>
+              <option>Даниил Тукальский</option>
+              <option>Никита Романчик</option>
+            </select>
+            <select aria-label="Месяц">
+              <option selected>08.2026</option>
+              <option>07.2026</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="metric-grid" role="table" aria-label="План и факт по показателям">
+          <div class="metric-row metric-head" role="row">
+            <div role="columnheader">Показатель</div>
+            <div role="columnheader" class="metric-plan">План</div>
+            <div role="columnheader" class="metric-fact">Факт</div>
+            <div role="columnheader">Выполнение</div>
+            <div role="columnheader">Прогноз</div>
+            <div role="columnheader">Вес</div>
+          </div>
+          <div class="metric-row" role="row">
+            <div class="metric-name" role="cell" data-label="Показатель">Продуктивные звонки</div>
+            <div class="metric-plan" role="cell" data-label="План">50</div>
+            <div class="metric-fact" role="cell" data-label="Факт">0</div>
+            <div role="cell" data-label="Выполнение"><div class="progress-cell"><div class="score-bar-track"><div class="score-bar-fill bad" style="width:0%"></div></div><span class="progress-label bad">0,0%</span></div></div>
+            <div role="cell" data-label="Прогноз"><span class="progress-label">0,0%</span></div>
+            <div role="cell" data-label="Вес"><span class="pill">10%</span></div>
+          </div>
+          <div class="metric-row" role="row">
+            <div class="metric-name" role="cell" data-label="Показатель">Впервые заключённые договоры</div>
+            <div class="metric-plan" role="cell" data-label="План">1</div>
+            <div class="metric-fact" role="cell" data-label="Факт">1</div>
+            <div role="cell" data-label="Выполнение"><div class="progress-cell"><div class="score-bar-track"><div class="score-bar-fill" style="width:100%"></div></div><span class="progress-label ok">100%</span></div></div>
+            <div role="cell" data-label="Прогноз"><span class="progress-label">100%</span></div>
+            <div role="cell" data-label="Вес"><span class="pill">5%</span></div>
+          </div>
+          <div class="metric-row" role="row">
+            <div class="metric-name" role="cell" data-label="Показатель">Сделки с новыми клиентами</div>
+            <div class="metric-plan" role="cell" data-label="План">1</div>
+            <div class="metric-fact" role="cell" data-label="Факт">1</div>
+            <div role="cell" data-label="Выполнение"><div class="progress-cell"><div class="score-bar-track"><div class="score-bar-fill" style="width:100%"></div></div><span class="progress-label ok">100%</span></div></div>
+            <div role="cell" data-label="Прогноз"><span class="progress-label">100%</span></div>
+            <div role="cell" data-label="Вес"><span class="pill">5%</span></div>
+          </div>
+          <div class="metric-row" role="row">
+            <div class="metric-name" role="cell" data-label="Показатель">Сделки с повторными клиентами</div>
+            <div class="metric-plan" role="cell" data-label="План">30</div>
+            <div class="metric-fact" role="cell" data-label="Факт">28</div>
+            <div role="cell" data-label="Выполнение"><div class="progress-cell"><div class="score-bar-track"><div class="score-bar-fill warn" style="width:93.3%"></div></div><span class="progress-label warn">93,3%</span></div></div>
+            <div role="cell" data-label="Прогноз"><span class="progress-label">93,3%</span></div>
+            <div role="cell" data-label="Вес"><span class="pill">80%</span></div>
+          </div>
+        </div>
+
+        <div class="total-row">
+          <div><strong>Итого по воронке</strong><br /><span style="color:var(--muted);font-size:0.85rem">с учётом весов 10 + 5 + 5 + 80</span></div>
+          <div><span style="color:var(--muted);font-size:0.8rem">Текущее</span><br /><strong>84,7%</strong></div>
+          <div><span style="color:var(--muted);font-size:0.8rem">Прогноз</span><br /><strong>84,7%</strong></div>
+        </div>
+      </section>
+
+      <section class="panel" aria-labelledby="calls-title">
+        <div class="panel-head">
+          <h2 id="calls-title">Детализация фактических показателей</h2>
+          <div class="panel-tools">
+            <span class="demo-badge">Ключ: 2026-8~244</span>
+          </div>
+        </div>
+        <div class="tabs" role="tablist" aria-label="Фильтр активности" data-detail-tabs>
+          <button type="button" class="tab is-active" role="tab" aria-selected="true" data-tab="calls-all">Все звонки</button>
+          <button type="button" class="tab" role="tab" aria-selected="false" data-tab="calls-60">Звонки &gt; 60 с</button>
+          <button type="button" class="tab" role="tab" aria-selected="false" data-tab="calls-productive">Продуктивные</button>
+          <button type="button" class="tab" role="tab" aria-selected="false" data-tab="quotes">КП с обратной связью</button>
+          <button type="button" class="tab" role="tab" aria-selected="false" data-tab="contracts">Договоры</button>
+          <button type="button" class="tab" role="tab" aria-selected="false" data-tab="deals-new">Новые сделки</button>
+          <button type="button" class="tab" role="tab" aria-selected="false" data-tab="deals-repeat">Повторные сделки</button>
+          <button type="button" class="tab" role="tab" aria-selected="false" data-tab="rating">Рейтинг 1</button>
+        </div>
+        <p class="detail-meta">Время обновления: 31.08.2026 17:01:43</p>
+
+        <div class="detail-panel is-active" data-detail-panel="calls-all">
+          <div class="table-wrap">
+            <table class="data-table">
+              <thead>
+                <tr>
+                  <th>Дата</th>
+                  <th>Время</th>
+                  <th>Номер звонящего</th>
+                  <th>Вызываемый абонент</th>
+                  <th class="num">Длительность, с</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr><td>28.08.2026</td><td>17:04:52</td><td>+375 29 675-78-58</td><td>+48 22 691-47-38</td><td class="num">187</td></tr>
+                <tr><td>28.08.2026</td><td>16:22:11</td><td>+375 29 675-78-58</td><td>+49 30 884-29-51</td><td class="num">142</td></tr>
+                <tr><td>28.08.2026</td><td>13:41:46</td><td>+375 29 675-78-58</td><td>+375 29 712-38-04</td><td class="num">449</td></tr>
+                <tr><td>28.08.2026</td><td>11:08:33</td><td>+375 29 675-78-58</td><td>+370 5 612-84-90</td><td class="num">215</td></tr>
+                <tr><td>28.08.2026</td><td>09:55:07</td><td>+375 29 675-78-58</td><td>+48 22 584-11-90</td><td class="num">93</td></tr>
+                <tr><td>27.08.2026</td><td>17:15:20</td><td>+375 29 675-78-58</td><td>+33 1 84 88 92-17</td><td class="num">156</td></tr>
+                <tr><td>27.08.2026</td><td>14:02:44</td><td>+375 29 675-78-58</td><td>+7 812 903-44-21</td><td class="num">318</td></tr>
+                <tr><td>27.08.2026</td><td>10:37:18</td><td>+375 29 675-78-58</td><td>+371 26 847-19-03</td><td class="num">74</td></tr>
+              </tbody>
+              <tfoot>
+                <tr><td colspan="4"><strong>Итого</strong></td><td class="num"><strong>1634</strong></td></tr>
+              </tfoot>
+            </table>
+          </div>
+        </div>
+
+        <div class="detail-panel" data-detail-panel="calls-60" hidden>
+          <div class="table-wrap">
+            <table class="data-table">
+              <thead>
+                <tr>
+                  <th>Дата</th>
+                  <th>Время</th>
+                  <th>Номер звонящего</th>
+                  <th>Вызываемый абонент</th>
+                  <th class="num">Длительность, с</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr><td>28.08.2026</td><td>17:04:52</td><td>+375 29 675-78-58</td><td>+48 22 691-47-38</td><td class="num">187</td></tr>
+                <tr><td>28.08.2026</td><td>16:22:11</td><td>+375 29 675-78-58</td><td>+49 30 884-29-51</td><td class="num">142</td></tr>
+                <tr><td>28.08.2026</td><td>13:41:46</td><td>+375 29 675-78-58</td><td>+375 29 712-38-04</td><td class="num">449</td></tr>
+                <tr><td>28.08.2026</td><td>11:08:33</td><td>+375 29 675-78-58</td><td>+370 5 612-84-90</td><td class="num">215</td></tr>
+                <tr><td>28.08.2026</td><td>09:55:07</td><td>+375 29 675-78-58</td><td>+48 22 584-11-90</td><td class="num">93</td></tr>
+                <tr><td>27.08.2026</td><td>17:15:20</td><td>+375 29 675-78-58</td><td>+33 1 84 88 92-17</td><td class="num">156</td></tr>
+                <tr><td>27.08.2026</td><td>14:02:44</td><td>+375 29 675-78-58</td><td>+7 812 903-44-21</td><td class="num">318</td></tr>
+                <tr><td>27.08.2026</td><td>10:37:18</td><td>+375 29 675-78-58</td><td>+371 26 847-19-03</td><td class="num">74</td></tr>
+              </tbody>
+              <tfoot>
+                <tr><td colspan="4"><strong>Итого</strong></td><td class="num"><strong>1634</strong></td></tr>
+              </tfoot>
+            </table>
+          </div>
+        </div>
+
+        <div class="detail-panel" data-detail-panel="calls-productive" hidden>
+          <div class="table-wrap">
+            <table class="data-table">
+              <thead>
+                <tr>
+                  <th>Дата</th>
+                  <th>Фактическая дата/время</th>
+                  <th>Контрагент</th>
+                  <th>Компания</th>
+                  <th class="num">Кол-во</th>
+                  <th>Комментарий</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>31.08.2026</td>
+                  <td><span class="status-ok">31.08.2026 11:25:23</span></td>
+                  <td>ООО «СеверТранс»</td>
+                  <td>АльфаКит Демо</td>
+                  <td class="num">1</td>
+                  <td class="comment">Уточнила: работают только через биржу. Контакт — Дарья, в отпуске до среды, перезвонить.</td>
+                </tr>
+                <tr>
+                  <td>31.08.2026</td>
+                  <td><span class="status-ok">31.08.2026 10:41:08</span></td>
+                  <td>ООО «БалтЛайн»</td>
+                  <td>АльфаКит Демо</td>
+                  <td class="num">1</td>
+                  <td class="comment">Актуальных запросов нет. Попросили напомнить о себе в сентябре, когда откроют сезон.</td>
+                </tr>
+                <tr>
+                  <td>30.08.2026</td>
+                  <td><span class="status-ok">30.08.2026 16:18:44</span></td>
+                  <td>ООО «ВитебскЭкспресс»</td>
+                  <td>АльфаКит Демо</td>
+                  <td class="num">1</td>
+                  <td class="comment">Везут сборным грузом из Польши — сейчас не интересно. Оставила контакт на LTL из Китая.</td>
+                </tr>
+                <tr>
+                  <td>29.08.2026</td>
+                  <td><span class="status-ok">29.08.2026 14:55:17</span></td>
+                  <td>ООО «ГродноКарго»</td>
+                  <td>АльфаКит Демо</td>
+                  <td class="num">1</td>
+                  <td class="comment">Елена: возят из ЕС и КНР. Обещала прислать запрос за июль–август для просчёта ставки.</td>
+                </tr>
+                <tr>
+                  <td>28.08.2026</td>
+                  <td><span class="status-ok">28.08.2026 09:12:31</span></td>
+                  <td>ИП Рудик М.А.</td>
+                  <td>АльфаКит Демо</td>
+                  <td class="num">1</td>
+                  <td class="comment">Нужна консультация по таможенному оформлению. Передала в операционный отдел, ждём документы.</td>
+                </tr>
+              </tbody>
+              <tfoot>
+                <tr><td colspan="4"><strong>Итого</strong></td><td class="num"><strong>42</strong></td><td></td></tr>
+              </tfoot>
+            </table>
+          </div>
+        </div>
+
+        <div class="detail-panel" data-detail-panel="quotes" hidden>
+          <div class="table-wrap">
+            <table class="data-table">
+              <thead>
+                <tr>
+                  <th>Заказчик</th>
+                  <th>№ запроса</th>
+                  <th>Дата ответа на КП</th>
+                  <th>Причина / результат</th>
+                  <th class="num">Кол-во</th>
+                  <th>Куратор</th>
+                  <th>Последняя модификация</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>ООО «Тукальский Трейд»</td>
+                  <td>11847</td>
+                  <td>27.08.2026</td>
+                  <td class="reason-bad">Не прошли по ставке</td>
+                  <td class="num">1</td>
+                  <td>Хоружко А.</td>
+                  <td>27.08.2026 11:26:45</td>
+                </tr>
+                <tr>
+                  <td>ООО «ОбодЛогистик»</td>
+                  <td>10423</td>
+                  <td>06.08.2026</td>
+                  <td class="reason-warn">Отказ дать обратную связь</td>
+                  <td class="num">1</td>
+                  <td>Хоружко А.</td>
+                  <td>06.08.2026 09:16:14</td>
+                </tr>
+                <tr>
+                  <td>ООО «Чигидин Транс»</td>
+                  <td>11682</td>
+                  <td>10.08.2026</td>
+                  <td class="reason-ok">Прошли по ставке — на перспективу</td>
+                  <td class="num">1</td>
+                  <td>Хоружко А.</td>
+                  <td>10.08.2026 12:42:48</td>
+                </tr>
+                <tr>
+                  <td>ООО «Чигидин Транс»</td>
+                  <td>11675</td>
+                  <td>13.08.2026</td>
+                  <td class="reason-bad">Не прошли по ставке</td>
+                  <td class="num">1</td>
+                  <td>Хоружко А.</td>
+                  <td>13.08.2026 17:44:40</td>
+                </tr>
+                <tr>
+                  <td>ООО «Чигидин Транс»</td>
+                  <td>11801</td>
+                  <td>25.08.2026</td>
+                  <td class="reason-bad">Не прошли — не оказываем часть услуг по маршруту</td>
+                  <td class="num">1</td>
+                  <td>Хоружко А.</td>
+                  <td>25.08.2026 10:15:49</td>
+                </tr>
+                <tr>
+                  <td>ООО «Пархимчик Карго»</td>
+                  <td>11790</td>
+                  <td>22.08.2026</td>
+                  <td class="reason-ok">Прошли — ждём подтверждение брони</td>
+                  <td class="num">1</td>
+                  <td>Хоружко А.</td>
+                  <td>22.08.2026 15:33:02</td>
+                </tr>
+              </tbody>
+              <tfoot>
+                <tr><td colspan="4"><strong>Итого</strong></td><td class="num"><strong>12</strong></td><td colspan="2"></td></tr>
+              </tfoot>
+            </table>
+          </div>
+        </div>
+
+        <div class="detail-panel" data-detail-panel="contracts" hidden>
+          <div class="table-wrap">
+            <table class="data-table">
+              <thead>
+                <tr>
+                  <th></th>
+                  <th>Клиент</th>
+                  <th>Дата договора</th>
+                  <th>Номер договора</th>
+                  <th class="num">Кол-во</th>
+                  <th>Продавец</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><span class="status-ok"></span></td>
+                  <td>ООО «МогилёвСтальСервис»</td>
+                  <td>10.08.2026</td>
+                  <td>HOR2841</td>
+                  <td class="num">1</td>
+                  <td>Хоружко А.</td>
+                </tr>
+                <tr>
+                  <td><span class="status-ok"></span></td>
+                  <td>ООО «ДнепрКонтейнер»</td>
+                  <td>19.08.2026</td>
+                  <td>RUD1923</td>
+                  <td class="num">1</td>
+                  <td>Хоружко А.</td>
+                </tr>
+              </tbody>
+              <tfoot>
+                <tr><td colspan="4"><strong>Итого</strong></td><td class="num"><strong>2</strong></td><td></td></tr>
+              </tfoot>
+            </table>
+          </div>
+        </div>
+
+        <div class="detail-panel" data-detail-panel="deals-new" hidden>
+          <div class="table-wrap">
+            <table class="data-table">
+              <thead>
+                <tr>
+                  <th></th>
+                  <th>№ заявки</th>
+                  <th>Дата заявки</th>
+                  <th class="num">Кол-во</th>
+                  <th>Продавец</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr class="tree-group"><td colspan="5">ООО «ДнепрКонтейнер»</td></tr>
+                <tr class="tree-child">
+                  <td></td>
+                  <td class="deal-id">08315-m</td>
+                  <td>19.08.2026</td>
+                  <td class="num">1</td>
+                  <td>Хоружко А.</td>
+                </tr>
+              </tbody>
+              <tfoot>
+                <tr><td colspan="3"><strong>Итого</strong></td><td class="num"><strong>1</strong></td><td></td></tr>
+              </tfoot>
+            </table>
+          </div>
+        </div>
+
+        <div class="detail-panel" data-detail-panel="deals-repeat" hidden>
+          <div class="table-wrap">
+            <table class="data-table">
+              <thead>
+                <tr>
+                  <th></th>
+                  <th>№ заявки</th>
+                  <th>Дата заявки</th>
+                  <th class="num">Кол-во</th>
+                  <th>Продавец</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr class="tree-group"><td colspan="5">ООО «ПинскФрахт»</td></tr>
+                <tr class="tree-child"><td></td><td class="deal-id">05201-m</td><td>13.07.2026</td><td class="num">1</td><td>Хоружко А.</td></tr>
+                <tr class="tree-group"><td colspan="5">ООО «ОбодТрейд»</td></tr>
+                <tr class="tree-child"><td></td><td class="deal-id">02101-r</td><td>14.07.2026</td><td class="num">1</td><td>Хоружко А.</td></tr>
+                <tr class="tree-child"><td></td><td class="deal-id">02102-r</td><td>14.07.2026</td><td class="num">1</td><td>Хоружко А.</td></tr>
+                <tr class="tree-child"><td></td><td class="deal-id">02103-r</td><td>14.07.2026</td><td class="num">1</td><td>Хоружко А.</td></tr>
+                <tr class="tree-child"><td></td><td class="deal-id">02104-r</td><td>14.07.2026</td><td class="num">1</td><td>Хоружко А.</td></tr>
+                <tr class="tree-child"><td></td><td class="deal-id">02105-r</td><td>14.07.2026</td><td class="num">1</td><td>Хоружко А.</td></tr>
+                <tr class="tree-child"><td></td><td class="deal-id">02106-r</td><td>14.07.2026</td><td class="num">1</td><td>Хоружко А.</td></tr>
+                <tr class="tree-child"><td></td><td class="deal-id">05302-m</td><td>31.07.2026</td><td class="num">1</td><td>Хоружко А.</td></tr>
+                <tr class="tree-child"><td></td><td class="deal-id">09488-k</td><td>06.07.2026</td><td class="num">1</td><td>Хоружко А.</td></tr>
+              </tbody>
+              <tfoot>
+                <tr><td colspan="3"><strong>Итого</strong></td><td class="num"><strong>9</strong></td><td></td></tr>
+              </tfoot>
+            </table>
+          </div>
+        </div>
+
+        <div class="detail-panel" data-detail-panel="rating" hidden>
+          <div class="table-wrap">
+            <table class="data-table">
+              <thead>
+                <tr>
+                  <th>Клиент</th>
+                  <th>Дата изменения рейтинга</th>
+                  <th class="num">Кол-во</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr><td>ООО «КаустикПром»</td><td>16.06.2026</td><td class="num">1</td></tr>
+                <tr><td>ООО «ЕвроФикс Логистик»</td><td>22.06.2026</td><td class="num">1</td></tr>
+                <tr><td>ООО «ИдеяШоп Экспорт»</td><td>18.06.2026</td><td class="num">1</td></tr>
+                <tr><td>ООО «ИнструментПром»</td><td>17.06.2026</td><td class="num">1</td></tr>
+                <tr><td>АО «ВажникХим»</td><td>16.06.2026</td><td class="num">1</td></tr>
+                <tr><td>ЗАО «Компэл Трейд»</td><td>10.06.2026</td><td class="num">1</td></tr>
+                <tr><td>ООО «ХимМатериалСнаб»</td><td>11.06.2026</td><td class="num">1</td></tr>
+              </tbody>
+              <tfoot>
+                <tr><td colspan="2"><strong>Итого</strong></td><td class="num"><strong>7</strong></td></tr>
+              </tfoot>
+            </table>
+          </div>
+        </div>
+      </section>
+
+      <p class="demo-note">Расчёт итога: 0×10% + 100×5% + 100×5% + 93,3×80% = 84,7%. Все контрагенты, номера заявок и комментарии — демо-данные, не совпадают с реальными клиентами.</p>
+    </div>
+  </main>
+
+  <footer class="demo-footer">
+    <div class="wrap">ALFAKIT NEXT · демо-панель для раздела «Аналитика» · <a href="sales-team.html">← к отчёту по команде</a></div>
+  </footer>
+  <script type="module" src="../analytics.js"></script>
+</body>
+</html>

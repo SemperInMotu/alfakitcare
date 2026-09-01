@@ -1,0 +1,148 @@
+<!doctype html>
+<html lang="be">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Панэль фіндырэктара · ALFAKIT Analytics</title>
+  <meta name="robots" content="noindex,nofollow" />
+  <link rel="icon" href="../../assets/favicon.svg" type="image/svg+xml" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=Syne:wght@600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../analytics.css" />
+</head>
+<body>
+  <header class="demo-header">
+    <div class="wrap demo-header-inner">
+      <a class="demo-brand" href="../../be/#reports">ALFAKIT <span>NEXT</span> · Analytics</a>
+      <nav class="demo-nav" aria-label="Дэма-справаздачы">
+        <a href="index.html">Усе</a>
+        <a href="ceo.html">CEO</a>
+        <a class="is-active" href="cfo.html" aria-current="page">CFO</a>
+        <a href="transport.html">Транспарт</a>
+        <a href="shareholders.html">Акцыянеры</a>
+        <a href="sales-team.html">Продажы</a>
+        <a href="../ru/cfo.html">RU</a>
+        <a href="../cfo.html">EN</a>
+        <a href="../../be/#reports">Сайт</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="demo-main">
+    <div class="wrap">
+      <div class="demo-hero">
+        <h1>Фінансавы дырэктар — эканоміка і казначэйства</h1>
+        <p>Каса, дэбітарская і крэдытарская запавежанасць, курсовыя розніцы па даце плацяжу, план/факт па P&amp;L. Валюта: BYN.</p>
+        <div class="demo-meta">
+          <span class="demo-badge">Дэма-даныя</span>
+          <span>Абноўлена: 31.08.2026 17:15</span>
+          <span>Курсы — на дату аплаты</span>
+        </div>
+      </div>
+
+      <div class="kpi-grid">
+        <article class="kpi-card">
+          <strong>4,34 млн BYN</strong>
+          <span>денежные средства</span>
+          <span class="kpi-delta up">+301 тыс. к 31.07</span>
+        </article>
+        <article class="kpi-card">
+          <strong>3,12 млн BYN</strong>
+          <span>дебиторская задолженность</span>
+          <span class="kpi-delta up">DSO 42 дня</span>
+        </article>
+        <article class="kpi-card">
+          <strong>2,16 млн BYN</strong>
+          <span>кредиторская задолженность</span>
+          <span class="kpi-delta flat">DPO 38 дней</span>
+        </article>
+        <article class="kpi-card">
+          <strong>−43,4 тыс.</strong>
+          <span>курсовая разница за месяц</span>
+          <span class="kpi-delta down">EUR / PLN</span>
+        </article>
+      </div>
+
+      <div class="split-grid">
+        <section class="panel">
+          <div class="panel-head"><h2>Дебиторка по срокам</h2></div>
+          <div class="bar-chart">
+            <div class="bar-row"><span class="bar-label">Текущая</span><div class="bar-track"><div class="bar-fill" style="width:62%"></div></div><span class="bar-value">1,94 млн</span></div>
+            <div class="bar-row"><span class="bar-label">1–30 дн.</span><div class="bar-track"><div class="bar-fill" style="width:22%"></div></div><span class="bar-value">0,69 млн</span></div>
+            <div class="bar-row"><span class="bar-label">31–60 дн.</span><div class="bar-track"><div class="bar-fill warn" style="width:10%"></div></div><span class="bar-value">0,31 млн</span></div>
+            <div class="bar-row"><span class="bar-label">61–90 дн.</span><div class="bar-track"><div class="bar-fill bad" style="width:5%"></div></div><span class="bar-value">0,13 млн</span></div>
+            <div class="bar-row"><span class="bar-label">&gt; 90 дн.</span><div class="bar-track"><div class="bar-fill bad" style="width:3%"></div></div><span class="bar-value">0,05 млн</span></div>
+          </div>
+        </section>
+        <section class="panel">
+          <div class="panel-head"><h2>Кредиторка по срокам</h2></div>
+          <div class="bar-chart">
+            <div class="bar-row"><span class="bar-label">Текущая</span><div class="bar-track"><div class="bar-fill" style="width:58%"></div></div><span class="bar-value">1,25 млн</span></div>
+            <div class="bar-row"><span class="bar-label">1–30 дн.</span><div class="bar-track"><div class="bar-fill" style="width:28%"></div></div><span class="bar-value">0,60 млн</span></div>
+            <div class="bar-row"><span class="bar-label">31–60 дн.</span><div class="bar-track"><div class="bar-fill warn" style="width:12%"></div></div><span class="bar-value">0,26 млн</span></div>
+            <div class="bar-row"><span class="bar-label">61+ дн.</span><div class="bar-track"><div class="bar-fill bad" style="width:3%"></div></div><span class="bar-value">0,05 млн</span></div>
+          </div>
+        </section>
+      </div>
+
+      <section class="panel">
+        <div class="panel-head"><h2>Курсовые разницы по дате платежа (08.2026)</h2></div>
+        <div class="table-wrap">
+          <table class="data-table">
+            <thead>
+              <tr>
+                <th>Валюта</th>
+                <th class="num">Выставлено (BYN)</th>
+                <th class="num">Оплачено (BYN)</th>
+                <th class="num">Курс при счёте</th>
+                <th class="num">Курс при оплате</th>
+                <th class="num">Разница</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td>EUR</td><td class="num">1,50 млн</td><td class="num">1,40 млн</td><td class="num">3,52</td><td class="num">3,55</td><td class="num reason-bad">−28,6 тыс.</td></tr>
+              <tr><td>PLN</td><td class="num">0,65 млн</td><td class="num">0,60 млн</td><td class="num">0,82</td><td class="num">0,81</td><td class="num reason-bad">−10,8 тыс.</td></tr>
+              <tr><td>USD</td><td class="num">0,33 млн</td><td class="num">0,31 млн</td><td class="num">3,24</td><td class="num">3,23</td><td class="num reason-ok">+1,4 тыс.</td></tr>
+              <tr><td>CNY</td><td class="num">0,43 млн</td><td class="num">0,41 млн</td><td class="num">0,45</td><td class="num">0,45</td><td class="num reason-ok">+5,4 тыс.</td></tr>
+            </tbody>
+            <tfoot>
+              <tr><td colspan="5"><strong>Итого за месяц</strong></td><td class="num"><strong class="reason-bad">−43,4 тыс.</strong></td></tr>
+            </tfoot>
+          </table>
+        </div>
+      </section>
+
+      <section class="panel">
+        <div class="panel-head"><h2>P&amp;L план/факт (08.2026 MTD)</h2></div>
+        <div class="table-wrap">
+          <table class="data-table">
+            <thead>
+              <tr>
+                <th>Статья</th>
+                <th class="num">План</th>
+                <th class="num">Факт</th>
+                <th class="num">Отклонение</th>
+                <th class="num">%</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td>Выручка</td><td class="num">7,97 млн</td><td class="num">8,42 млн</td><td class="num reason-ok">+454 тыс.</td><td class="num"><span class="pill ok">+5,7%</span></td></tr>
+              <tr><td>Себестоимость</td><td class="num">6,50 млн</td><td class="num">6,87 млн</td><td class="num reason-bad">−384 тыс.</td><td class="num"><span class="pill warn">+5,9%</span></td></tr>
+              <tr><td>Валовая прибыль</td><td class="num">1,47 млн</td><td class="num">1,55 млн</td><td class="num reason-ok">+84 тыс.</td><td class="num"><span class="pill ok">+5,7%</span></td></tr>
+              <tr><td>Операционные расходы</td><td class="num">1,04 млн</td><td class="num">1,02 млн</td><td class="num reason-ok">+24 тыс.</td><td class="num"><span class="pill ok">−2,3%</span></td></tr>
+              <tr><td>EBITDA</td><td class="num">0,43 млн</td><td class="num">0,53 млн</td><td class="num reason-ok">+108 тыс.</td><td class="num"><span class="pill ok">+25,4%</span></td></tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <p class="demo-note">Курсовая разница — по фактической дате оплаты, не по курсу на конец периода. Просрочка &gt;60 дней: <strong>178 тыс. BYN</strong> по 4 контрагентам (демо).</p>
+    </div>
+  </main>
+
+  <footer class="demo-footer">
+    <div class="wrap">ALFAKIT NEXT · дэма · <a href="index.html">← усе панэлі</a></div>
+  </footer>
+</body>
+</html>

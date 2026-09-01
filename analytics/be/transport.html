@@ -1,0 +1,147 @@
+<!doctype html>
+<html lang="be">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Транспартны аддзел · ALFAKIT Analytics</title>
+  <meta name="robots" content="noindex,nofollow" />
+  <link rel="icon" href="../../assets/favicon.svg" type="image/svg+xml" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=Syne:wght@600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../analytics.css" />
+</head>
+<body>
+  <header class="demo-header">
+    <div class="wrap demo-header-inner">
+      <a class="demo-brand" href="../../be/#reports">ALFAKIT <span>NEXT</span> · Analytics</a>
+      <nav class="demo-nav" aria-label="Дэма-справаздачы">
+        <a href="index.html">Усе</a>
+        <a href="ceo.html">CEO</a>
+        <a href="cfo.html">CFO</a>
+        <a class="is-active" href="transport.html" aria-current="page">Транспарт</a>
+        <a href="shareholders.html">Акцыянеры</a>
+        <a href="sales-team.html">Продажы</a>
+        <a href="../ru/transport.html">RU</a>
+        <a href="../transport.html">EN</a>
+        <a href="../../be/#reports">Сайт</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="demo-main">
+    <div class="wrap">
+      <div class="demo-hero">
+        <h1>Транспартны аддзел — аперацыйны кантроль</h1>
+        <p>Актыўныя перавозкі, дастаўка ў тэрмін, перавозчыкі, загрузка напрамкаў і чарга выключэнняў. Валюта: BYN.</p>
+        <div class="demo-meta">
+          <span class="demo-badge">Дэма-даныя</span>
+          <span>Абноўлена: 31.08.2026 17:15</span>
+          <span>Дыспетчарская · усе рэгіёны</span>
+        </div>
+      </div>
+
+      <div class="kpi-grid">
+        <article class="kpi-card">
+          <strong>84</strong>
+          <span>активных перевозок</span>
+          <span class="kpi-delta flat">12 ожидают назначения</span>
+        </article>
+        <article class="kpi-card">
+          <strong>91,6%</strong>
+          <span>доставка в срок</span>
+          <span class="kpi-delta up">+1,2 п.п. к июлю</span>
+        </article>
+        <article class="kpi-card">
+          <strong>4,2</strong>
+          <span>ср. срок в пути, дн.</span>
+          <span class="kpi-delta flat">авто внутри страны</span>
+        </article>
+        <article class="kpi-card">
+          <strong>7</strong>
+          <span>открытых исключений</span>
+          <span class="kpi-delta down">3 таможенных задержки</span>
+        </article>
+      </div>
+
+      <div class="split-grid">
+        <section class="panel">
+          <div class="panel-head"><h2>Перевозки по статусу</h2></div>
+          <div class="bar-chart">
+            <div class="bar-row"><span class="bar-label">В пути</span><div class="bar-track"><div class="bar-fill" style="width:48%"></div></div><span class="bar-value">48</span></div>
+            <div class="bar-row"><span class="bar-label">На погрузке</span><div class="bar-track"><div class="bar-fill" style="width:14%"></div></div><span class="bar-value">14</span></div>
+            <div class="bar-row"><span class="bar-label">На выгрузке</span><div class="bar-track"><div class="bar-fill" style="width:12%"></div></div><span class="bar-value">12</span></div>
+            <div class="bar-row"><span class="bar-label">Таможня</span><div class="bar-track"><div class="bar-fill warn" style="width:8%"></div></div><span class="bar-value">8</span></div>
+            <div class="bar-row"><span class="bar-label">Исключение</span><div class="bar-track"><div class="bar-fill bad" style="width:8%"></div></div><span class="bar-value">7</span></div>
+            <div class="bar-row"><span class="bar-label">Сдано сегодня</span><div class="bar-track"><div class="bar-fill" style="width:18%"></div></div><span class="bar-value">18</span></div>
+          </div>
+        </section>
+        <section class="panel">
+          <div class="panel-head"><h2>Исключения</h2></div>
+          <ul class="alert-list">
+            <li><span class="alert-dot bad"></span><span><strong>ПР-88315</strong> — задержка на таможне, Брест. Несовпадение в инвойсе, +2 дня</span></li>
+            <li><span class="alert-dot bad"></span><span><strong>ПР-88201</strong> — перевозчик не вышел, Минск → Гомель. Переназначено</span></li>
+            <li><span class="alert-dot"></span><span><strong>ПР-88194</strong> — ремонт на трассе М1, +6 ч</span></li>
+            <li><span class="alert-dot"></span><span><strong>ПР-88172</strong> — получатель закрылся раньше, Витебск. Перенос на пн</span></li>
+            <li><span class="alert-dot ok"></span><span><strong>ПР-88158</strong> — снято: сбой рефрижератора, Гродно</span></li>
+          </ul>
+        </section>
+      </div>
+
+      <section class="panel">
+        <div class="panel-head"><h2>Перевозчики (08.2026 MTD)</h2></div>
+        <div class="table-wrap">
+          <table class="data-table">
+            <thead>
+              <tr>
+                <th>Перевозчик</th>
+                <th class="num">Рейсов</th>
+                <th class="num">В срок %</th>
+                <th class="num">Ср. ставка/км</th>
+                <th class="num">Претензии</th>
+                <th>Диспетчер</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td class="name">ООО «БелТрансАвто»</td><td class="num">142</td><td class="num"><span class="pill ok">94,2%</span></td><td class="num">1,42 BYN</td><td class="num">0</td><td>Гринь Д.</td></tr>
+              <tr><td class="name">ООО «ВостокЛайн»</td><td class="num">98</td><td class="num"><span class="pill ok">92,8%</span></td><td class="num">1,48 BYN</td><td class="num">1</td><td>Мухаровский А.</td></tr>
+              <tr><td class="name">ИП Пархимчик</td><td class="num">76</td><td class="num"><span class="pill warn">88,1%</span></td><td class="num">1,38 BYN</td><td class="num">2</td><td>Гринь Д.</td></tr>
+              <tr><td class="name">ООО «ПрибалтТранс»</td><td class="num">54</td><td class="num"><span class="pill ok">93,5%</span></td><td class="num">1,52 BYN</td><td class="num">0</td><td>Бакунчик Е.</td></tr>
+              <tr><td class="name">ООО «ВитебскЭкспресс»</td><td class="num">41</td><td class="num"><span class="pill bad">81,4%</span></td><td class="num">1,35 BYN</td><td class="num">3</td><td>Мухаровский А.</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <section class="panel">
+        <div class="panel-head"><h2>Загрузка направлений (7 дней)</h2></div>
+        <div class="table-wrap">
+          <table class="data-table">
+            <thead>
+              <tr>
+                <th>Направление</th>
+                <th class="num">Забронир.</th>
+                <th class="num">Мощность</th>
+                <th class="num">Загрузка</th>
+                <th class="num">Ср. ставка</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td>Минск → Брест</td><td class="num">38</td><td class="num">42</td><td class="num"><span class="pill warn">90,5%</span></td><td class="num">1 840 BYN</td></tr>
+              <tr><td>Гомель → Вильнюс</td><td class="num">24</td><td class="num">28</td><td class="num"><span class="pill ok">85,7%</span></td><td class="num">2 120 BYN</td></tr>
+              <tr><td>Могилёв → Гродно</td><td class="num">19</td><td class="num">22</td><td class="num"><span class="pill ok">86,4%</span></td><td class="num">1 960 BYN</td></tr>
+              <tr><td>Минск → Гродно</td><td class="num">31</td><td class="num">32</td><td class="num"><span class="pill bad">96,9%</span></td><td class="num">1 280 BYN</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <p class="demo-note">Данные из TMS / диспетчерского модуля. Номера перевозок и перевозчики вымышленные. Таможенные задержки — на контроль <a href="cfo.html">CFO</a> при начислении простоя.</p>
+    </div>
+  </main>
+
+  <footer class="demo-footer">
+    <div class="wrap">ALFAKIT NEXT · дэма · <a href="index.html">← усе панэлі</a></div>
+  </footer>
+</body>
+</html>

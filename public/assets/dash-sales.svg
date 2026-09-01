@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 360" role="img" aria-label="Sales dashboard placeholder">
+  <rect width="640" height="360" fill="#0c1520"/>
+  <rect x="24" y="24" width="592" height="40" rx="4" fill="#132033"/>
+  <text x="40" y="50" fill="#6a9bb0" font-family="Segoe UI, Arial, sans-serif" font-size="16" font-weight="700">Sales � Rates, margin &amp; SLA</text>
+  <text x="480" y="50" fill="#5a6b7a" font-family="Segoe UI, Arial, sans-serif" font-size="12">SAMPLE � NO CLIENT DATA</text>
+  <rect x="24" y="84" width="280" height="252" rx="4" fill="#132033"/>
+  <rect x="320" y="84" width="296" height="120" rx="4" fill="#132033"/>
+  <rect x="320" y="220" width="140" height="116" rx="4" fill="#132033"/>
+  <rect x="476" y="220" width="140" height="116" rx="4" fill="#132033"/>
+  <text x="40" y="112" fill="#9bb8c6" font-size="12" font-family="Segoe UI, Arial, sans-serif">Request � Quote funnel</text>
+  <rect x="48" y="140" width="220" height="22" fill="#4e7f96"/>
+  <rect x="48" y="176" width="170" height="22" fill="#6a9bb0"/>
+  <rect x="48" y="212" width="120" height="22" fill="#9bb8c6"/>
+  <rect x="48" y="248" width="80" height="22" fill="#c4d4de"/>
+  <text x="336" y="112" fill="#9bb8c6" font-size="12" font-family="Segoe UI, Arial, sans-serif">Margin by period</text>
+  <polyline points="344,180 380,160 420,168 460,140 500,150 540,125 580,135" fill="none" stroke="#6a9bb0" stroke-width="2.5"/>
+  <text x="336" y="248" fill="#9bb8c6" font-size="12" font-family="Segoe UI, Arial, sans-serif">Quote SLA (h)</text>
+  <text x="336" y="292" fill="#f7fafc" font-size="32" font-family="Segoe UI, Arial, sans-serif" font-weight="700">��</text>
+  <text x="492" y="248" fill="#9bb8c6" font-size="12" font-family="Segoe UI, Arial, sans-serif">Forwarder load</text>
+  <text x="492" y="292" fill="#f7fafc" font-size="32" font-family="Segoe UI, Arial, sans-serif" font-weight="700">��</text>
+</svg>
