@@ -1,0 +1,152 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>CEO dashboard · ALFAKIT Analytics</title>
+  <meta name="robots" content="noindex,nofollow" />
+  <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=Syne:wght@600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="analytics.css" />
+</head>
+<body>
+  <header class="demo-header">
+    <div class="wrap demo-header-inner">
+      <a class="demo-brand" href="../#reports">ALFAKIT <span>NEXT</span> · Analytics</a>
+      <nav class="demo-nav" aria-label="Demo reports">
+        <a href="index.html">All</a>
+        <a class="is-active" href="ceo.html" aria-current="page">CEO</a>
+        <a href="cfo.html">CFO</a>
+        <a href="transport.html">Ops</a>
+        <a href="shareholders.html">Investors</a>
+        <a href="sales-team.html">Sales</a>
+        <a href="be/ceo.html">BE</a>
+        <a href="ru/ceo.html">RU</a>
+        <a href="../#reports">Site</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="demo-main">
+    <div class="wrap">
+      <div class="demo-hero">
+        <h1>CEO — business health</h1>
+        <p>Month-to-date snapshot: revenue, profitability, open pipeline and service-level compliance. Drill-down to sales and operations from linked panels.</p>
+        <div class="demo-meta">
+          <span class="demo-badge">Demo data</span>
+          <span>Updated: Aug 31, 2026 5:15 PM</span>
+          <span>Period: Aug 2026 · consolidated</span>
+        </div>
+      </div>
+
+      <div class="kpi-grid">
+        <article class="kpi-card">
+          <strong>$2.41M</strong>
+          <span>revenue MTD</span>
+          <span class="kpi-delta up">+8.2% vs Aug LY</span>
+        </article>
+        <article class="kpi-card">
+          <strong>18.4%</strong>
+          <span>gross margin</span>
+          <span class="kpi-delta up">+0.6 pp</span>
+        </article>
+        <article class="kpi-card">
+          <strong>$4.82M</strong>
+          <span>open pipeline</span>
+          <span class="kpi-delta flat">127 deals</span>
+        </article>
+        <article class="kpi-card">
+          <strong>94.1%</strong>
+          <span>quote SLA compliance</span>
+          <span class="kpi-delta warn">target 95%</span>
+        </article>
+      </div>
+
+      <div class="split-grid">
+        <section class="panel">
+          <div class="panel-head"><h2>Revenue by segment</h2></div>
+          <div class="bar-chart">
+            <div class="bar-row"><span class="bar-label">FTL domestic</span><div class="bar-track"><div class="bar-fill" style="width:78%"></div></div><span class="bar-value">$1.12M</span></div>
+            <div class="bar-row"><span class="bar-label">LTL / partial</span><div class="bar-track"><div class="bar-fill" style="width:52%"></div></div><span class="bar-value">$740K</span></div>
+            <div class="bar-row"><span class="bar-label">International</span><div class="bar-track"><div class="bar-fill" style="width:38%"></div></div><span class="bar-value">$540K</span></div>
+            <div class="bar-row"><span class="bar-label">Customs / brokerage</span><div class="bar-track"><div class="bar-fill warn" style="width:12%"></div></div><span class="bar-value">$170K</span></div>
+          </div>
+        </section>
+        <section class="panel">
+          <div class="panel-head"><h2>Alerts</h2></div>
+          <ul class="alert-list">
+            <li><span class="alert-dot bad"></span><span><strong>3 accounts</strong> — margin below 12% on Aug lanes (Delta Container, Oakwood Trade, Pine Creek)</span></li>
+            <li><span class="alert-dot"></span><span><strong>Quote SLA</strong> — 6 RFQs answered after 4 h window (ops backlog Tue–Wed)</span></li>
+            <li><span class="alert-dot ok"></span><span><strong>Collections</strong> — DSO improved to 42 days (−3 vs July)</span></li>
+            <li><span class="alert-dot"></span><span><strong>Capacity</strong> — Midwest lane utilization 94% next week</span></li>
+          </ul>
+        </section>
+      </div>
+
+      <section class="panel">
+        <div class="panel-head">
+          <h2>Top accounts by revenue (MTD)</h2>
+          <div class="panel-tools">
+            <select aria-label="Period"><option selected>Aug 2026</option><option>Jul 2026</option><option>YTD</option></select>
+          </div>
+        </div>
+        <div class="table-wrap">
+          <table class="data-table">
+            <thead>
+              <tr>
+                <th>Account</th>
+                <th>Segment</th>
+                <th class="num">Revenue</th>
+                <th class="num">Margin</th>
+                <th class="num">Open deals</th>
+                <th>Owner</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td class="name">Delta Container Corp</td><td>International</td><td class="num">$312K</td><td class="num"><span class="pill ok">19.2%</span></td><td class="num">4</td><td>Hart, A.</td></tr>
+              <tr><td class="name">Pacific Steel Service</td><td>FTL</td><td class="num">$248K</td><td class="num"><span class="pill ok">17.8%</span></td><td class="num">2</td><td>Hart, A.</td></tr>
+              <tr><td class="name">Chen Freight Solutions</td><td>LTL</td><td class="num">$196K</td><td class="num"><span class="pill warn">14.1%</span></td><td class="num">6</td><td>Chen, V.</td></tr>
+              <tr><td class="name">NorthStar Freight LLC</td><td>FTL</td><td class="num">$184K</td><td class="num"><span class="pill ok">20.4%</span></td><td class="num">1</td><td>Tucker, D.</td></tr>
+              <tr><td class="name">Gateway Cargo Inc</td><td>International</td><td class="num">$171K</td><td class="num"><span class="pill ok">18.9%</span></td><td class="num">3</td><td>Hart, A.</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <section class="panel">
+        <div class="panel-head"><h2>Pipeline by stage</h2></div>
+        <div class="table-wrap">
+          <table class="data-table">
+            <thead>
+              <tr>
+                <th>Stage</th>
+                <th class="num">Deals</th>
+                <th class="num">Value</th>
+                <th class="num">Weighted</th>
+                <th class="num">Avg age, days</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td>RFQ received</td><td class="num">38</td><td class="num">$1.42M</td><td class="num">$284K</td><td class="num">2.1</td></tr>
+              <tr><td>Quote sent</td><td class="num">52</td><td class="num">$1.86M</td><td class="num">$744K</td><td class="num">5.8</td></tr>
+              <tr><td>Negotiation</td><td class="num">24</td><td class="num">$980K</td><td class="num">$588K</td><td class="num">11.4</td></tr>
+              <tr><td>Contract pending</td><td class="num">13</td><td class="num">$520K</td><td class="num">$416K</td><td class="num">6.2</td></tr>
+            </tbody>
+            <tfoot>
+              <tr><td><strong>Total</strong></td><td class="num"><strong>127</strong></td><td class="num"><strong>$4.82M</strong></td><td class="num"><strong>$2.03M</strong></td><td class="num">—</td></tr>
+            </tfoot>
+          </table>
+        </div>
+      </section>
+
+      <p class="demo-note">CEO view aggregates sales CRM, billing and operations data. Linked: <a href="cfo.html">CFO</a> (cash &amp; margin detail), <a href="transport.html">Transportation</a> (delivery SLA), <a href="sales-team.html">Sales team</a> (rep attainment).</p>
+    </div>
+  </main>
+
+  <footer class="demo-footer">
+    <div class="wrap">ALFAKIT NEXT · Analytics demo · <a href="index.html">← all dashboards</a></div>
+  </footer>
+</body>
+</html>

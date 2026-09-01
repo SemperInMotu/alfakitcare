@@ -1,0 +1,152 @@
+<!doctype html>
+<html lang="be">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Панэль кіраўніка · ALFAKIT Analytics</title>
+  <meta name="robots" content="noindex,nofollow" />
+  <link rel="icon" href="../../assets/favicon.svg" type="image/svg+xml" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=Syne:wght@600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../analytics.css" />
+</head>
+<body>
+  <header class="demo-header">
+    <div class="wrap demo-header-inner">
+      <a class="demo-brand" href="../../be/#reports">ALFAKIT <span>NEXT</span> · Analytics</a>
+      <nav class="demo-nav" aria-label="Дэма-справаздачы">
+        <a href="index.html">Усе</a>
+        <a class="is-active" href="ceo.html" aria-current="page">CEO</a>
+        <a href="cfo.html">CFO</a>
+        <a href="transport.html">Транспарт</a>
+        <a href="shareholders.html">Акцыянеры</a>
+        <a href="sales-team.html">Продажы</a>
+        <a href="../ru/ceo.html">RU</a>
+        <a href="../ceo.html">EN</a>
+        <a href="../../be/#reports">Сайт</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="demo-main">
+    <div class="wrap">
+      <div class="demo-hero">
+        <h1>Кіраўнік — стан бізнесу</h1>
+        <p>Зводка за месяц: выручка, рэнтабельнасць, адкрытая воронка і выкананне тэрмінаў адказу на запыты. Валюта: BYN.</p>
+        <div class="demo-meta">
+          <span class="demo-badge">Дэма-даныя</span>
+          <span>Абноўлена: 31.08.2026 17:15</span>
+          <span>Перыяд: 08.2026 · кансалідавана</span>
+        </div>
+      </div>
+
+      <div class="kpi-grid">
+        <article class="kpi-card">
+          <strong>8,42 млн BYN</strong>
+          <span>выручка за месяц</span>
+          <span class="kpi-delta up">+8,2% к авг. 2025</span>
+        </article>
+        <article class="kpi-card">
+          <strong>18,4%</strong>
+          <span>валовая маржа</span>
+          <span class="kpi-delta up">+0,6 п.п.</span>
+        </article>
+        <article class="kpi-card">
+          <strong>16,9 млн BYN</strong>
+          <span>адкрытая воронка</span>
+          <span class="kpi-delta flat">127 здзелак</span>
+        </article>
+        <article class="kpi-card">
+          <strong>94,1%</strong>
+          <span>выкананне SLA па КП</span>
+          <span class="kpi-delta warn">мэта 95%</span>
+        </article>
+      </div>
+
+      <div class="split-grid">
+        <section class="panel">
+          <div class="panel-head"><h2>Выручка па напрамках</h2></div>
+          <div class="bar-chart">
+            <div class="bar-row"><span class="bar-label">Авто внутр.</span><div class="bar-track"><div class="bar-fill" style="width:78%"></div></div><span class="bar-value">3,92 млн</span></div>
+            <div class="bar-row"><span class="bar-label">Сборные</span><div class="bar-track"><div class="bar-fill" style="width:52%"></div></div><span class="bar-value">2,59 млн</span></div>
+            <div class="bar-row"><span class="bar-label">Междунар.</span><div class="bar-track"><div class="bar-fill" style="width:38%"></div></div><span class="bar-value">1,89 млн</span></div>
+            <div class="bar-row"><span class="bar-label">Таможня</span><div class="bar-track"><div class="bar-fill warn" style="width:12%"></div></div><span class="bar-value">0,59 млн</span></div>
+          </div>
+        </section>
+        <section class="panel">
+          <div class="panel-head"><h2>Сігналы</h2></div>
+          <ul class="alert-list">
+            <li><span class="alert-dot bad"></span><span><strong>3 клиента</strong> — маржа ниже 12% по августовским маршрутам (ДнепрКонтейнер, ОбодТрейд, ПинскФрахт)</span></li>
+            <li><span class="alert-dot"></span><span><strong>SLA по КП</strong> — 6 запросов отвечены позже 4 ч (очередь вт–ср)</span></li>
+            <li><span class="alert-dot ok"></span><span><strong>Дебиторка</strong> — DSO снизился до 42 дней (−3 к июлю)</span></li>
+            <li><span class="alert-dot"></span><span><strong>Мощности</strong> — загрузка направления Минск–Гродно 94% на след. неделю</span></li>
+          </ul>
+        </section>
+      </div>
+
+      <section class="panel">
+        <div class="panel-head">
+          <h2>Топ-клиенты по выручке (месяц)</h2>
+          <div class="panel-tools">
+            <select aria-label="Период"><option selected>08.2026</option><option>07.2026</option><option>YTD</option></select>
+          </div>
+        </div>
+        <div class="table-wrap">
+          <table class="data-table">
+            <thead>
+              <tr>
+                <th>Клиент</th>
+                <th>Направление</th>
+                <th class="num">Выручка</th>
+                <th class="num">Маржа</th>
+                <th class="num">Откр. сделки</th>
+                <th>Менеджер</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td class="name">ООО «ДнепрКонтейнер»</td><td>Междунар.</td><td class="num">1,09 млн</td><td class="num"><span class="pill ok">19,2%</span></td><td class="num">4</td><td>Хоружко А.</td></tr>
+              <tr><td class="name">ООО «МогилёвСтальСервис»</td><td>Авто</td><td class="num">0,87 млн</td><td class="num"><span class="pill ok">17,8%</span></td><td class="num">2</td><td>Хоружко А.</td></tr>
+              <tr><td class="name">ООО «Чигидин Транс»</td><td>Сборные</td><td class="num">0,69 млн</td><td class="num"><span class="pill warn">14,1%</span></td><td class="num">6</td><td>Чигидин В.</td></tr>
+              <tr><td class="name">ООО «СеверТранс»</td><td>Авто</td><td class="num">0,64 млн</td><td class="num"><span class="pill ok">20,4%</span></td><td class="num">1</td><td>Тукальский Д.</td></tr>
+              <tr><td class="name">ООО «ГродноКарго»</td><td>Междунар.</td><td class="num">0,60 млн</td><td class="num"><span class="pill ok">18,9%</span></td><td class="num">3</td><td>Хоружко А.</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <section class="panel">
+        <div class="panel-head"><h2>Воронка по стадиям</h2></div>
+        <div class="table-wrap">
+          <table class="data-table">
+            <thead>
+              <tr>
+                <th>Стадия</th>
+                <th class="num">Сделок</th>
+                <th class="num">Сумма</th>
+                <th class="num">Взвешенная</th>
+                <th class="num">Ср. возраст, дн.</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td>Запрос получен</td><td class="num">38</td><td class="num">4,97 млн</td><td class="num">0,99 млн</td><td class="num">2,1</td></tr>
+              <tr><td>КП отправлено</td><td class="num">52</td><td class="num">6,51 млн</td><td class="num">2,60 млн</td><td class="num">5,8</td></tr>
+              <tr><td>Переговоры</td><td class="num">24</td><td class="num">3,43 млн</td><td class="num">2,06 млн</td><td class="num">11,4</td></tr>
+              <tr><td>Договор на подписи</td><td class="num">13</td><td class="num">1,82 млн</td><td class="num">1,46 млн</td><td class="num">6,2</td></tr>
+            </tbody>
+            <tfoot>
+              <tr><td><strong>Итого</strong></td><td class="num"><strong>127</strong></td><td class="num"><strong>16,9 млн</strong></td><td class="num"><strong>7,11 млн</strong></td><td class="num">—</td></tr>
+            </tfoot>
+          </table>
+        </div>
+      </section>
+
+      <p class="demo-note">Зводка агрэгуе CRM, білінг і аперацыі. Звязаныя панэлі: <a href="cfo.html">CFO</a>, <a href="transport.html">Транспарт</a>, <a href="sales-team.html">Продажы</a>.</p>
+    </div>
+  </main>
+
+  <footer class="demo-footer">
+    <div class="wrap">ALFAKIT NEXT · дэма · <a href="index.html">← усе панэлі</a></div>
+  </footer>
+</body>
+</html>

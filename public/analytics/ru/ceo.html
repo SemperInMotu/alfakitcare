@@ -1,0 +1,152 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Панель руководителя · ALFAKIT Analytics</title>
+  <meta name="robots" content="noindex,nofollow" />
+  <link rel="icon" href="../../assets/favicon.svg" type="image/svg+xml" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=Syne:wght@600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../analytics.css" />
+</head>
+<body>
+  <header class="demo-header">
+    <div class="wrap demo-header-inner">
+      <a class="demo-brand" href="../../ru/#reports">ALFAKIT <span>NEXT</span> · Analytics</a>
+      <nav class="demo-nav" aria-label="Демо-отчёты">
+        <a href="index.html">Все</a>
+        <a class="is-active" href="ceo.html" aria-current="page">CEO</a>
+        <a href="cfo.html">CFO</a>
+        <a href="transport.html">Транспорт</a>
+        <a href="shareholders.html">Акционеры</a>
+        <a href="sales-team.html">Продажи</a>
+        <a href="../be/ceo.html">BE</a>
+        <a href="../ceo.html">EN</a>
+        <a href="../../ru/#reports">Сайт</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="demo-main">
+    <div class="wrap">
+      <div class="demo-hero">
+        <h1>Руководитель — состояние бизнеса</h1>
+        <p>Сводка за месяц: выручка, рентабельность, открытая воронка и соблюдение сроков ответа на запросы. Валюта отчёта — российский рубль.</p>
+        <div class="demo-meta">
+          <span class="demo-badge">Демо-данные</span>
+          <span>Обновлено: 31.08.2026 17:15</span>
+          <span>Период: 08.2026 · консолидировано · ₽</span>
+        </div>
+      </div>
+
+      <div class="kpi-grid">
+        <article class="kpi-card">
+          <strong>240 млн ₽</strong>
+          <span>выручка за месяц</span>
+          <span class="kpi-delta up">+8,2% к авг. 2025</span>
+        </article>
+        <article class="kpi-card">
+          <strong>18,4%</strong>
+          <span>валовая маржа</span>
+          <span class="kpi-delta up">+0,6 п.п.</span>
+        </article>
+        <article class="kpi-card">
+          <strong>482 млн ₽</strong>
+          <span>открытая воронка</span>
+          <span class="kpi-delta flat">127 сделок</span>
+        </article>
+        <article class="kpi-card">
+          <strong>94,1%</strong>
+          <span>соблюдение SLA по КП</span>
+          <span class="kpi-delta warn">цель 95%</span>
+        </article>
+      </div>
+
+      <div class="split-grid">
+        <section class="panel">
+          <div class="panel-head"><h2>Выручка по направлениям</h2></div>
+          <div class="bar-chart">
+            <div class="bar-row"><span class="bar-label">Авто внутр.</span><div class="bar-track"><div class="bar-fill" style="width:78%"></div></div><span class="bar-value">112 млн ₽</span></div>
+            <div class="bar-row"><span class="bar-label">Сборные</span><div class="bar-track"><div class="bar-fill" style="width:52%"></div></div><span class="bar-value">74 млн ₽</span></div>
+            <div class="bar-row"><span class="bar-label">Междунар.</span><div class="bar-track"><div class="bar-fill" style="width:38%"></div></div><span class="bar-value">54 млн ₽</span></div>
+            <div class="bar-row"><span class="bar-label">Таможня</span><div class="bar-track"><div class="bar-fill warn" style="width:12%"></div></div><span class="bar-value">17 млн ₽</span></div>
+          </div>
+        </section>
+        <section class="panel">
+          <div class="panel-head"><h2>Сигналы</h2></div>
+          <ul class="alert-list">
+            <li><span class="alert-dot bad"></span><span><strong>3 клиента</strong> — маржа ниже 12% по августовским маршрутам (ДнепрКонтейнер, ОбодТрейд, ПинскФрахт)</span></li>
+            <li><span class="alert-dot"></span><span><strong>SLA по КП</strong> — 6 запросов отвечены позже 4 ч (очередь вт–ср)</span></li>
+            <li><span class="alert-dot ok"></span><span><strong>Дебиторка</strong> — DSO снизился до 42 дней (−3 к июлю)</span></li>
+            <li><span class="alert-dot"></span><span><strong>Мощности</strong> — загрузка направления Москва–Санкт-Петербург 94% на след. неделю</span></li>
+          </ul>
+        </section>
+      </div>
+
+      <section class="panel">
+        <div class="panel-head">
+          <h2>Топ-клиенты по выручке (месяц)</h2>
+          <div class="panel-tools">
+            <select aria-label="Период"><option selected>08.2026</option><option>07.2026</option><option>YTD</option></select>
+          </div>
+        </div>
+        <div class="table-wrap">
+          <table class="data-table">
+            <thead>
+              <tr>
+                <th>Клиент</th>
+                <th>Направление</th>
+                <th class="num">Выручка, ₽</th>
+                <th class="num">Маржа</th>
+                <th class="num">Откр. сделки</th>
+                <th>Менеджер</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td class="name">ООО «ДнепрКонтейнер»</td><td>Междунар.</td><td class="num">31,1 млн</td><td class="num"><span class="pill ok">19,2%</span></td><td class="num">4</td><td>Хоружко А.</td></tr>
+              <tr><td class="name">ООО «МогилёвСтальСервис»</td><td>Авто</td><td class="num">24,8 млн</td><td class="num"><span class="pill ok">17,8%</span></td><td class="num">2</td><td>Хоружко А.</td></tr>
+              <tr><td class="name">ООО «Чигидин Транс»</td><td>Сборные</td><td class="num">19,7 млн</td><td class="num"><span class="pill warn">14,1%</span></td><td class="num">6</td><td>Чигидин В.</td></tr>
+              <tr><td class="name">ООО «СеверТранс»</td><td>Авто</td><td class="num">18,2 млн</td><td class="num"><span class="pill ok">20,4%</span></td><td class="num">1</td><td>Тукальский Д.</td></tr>
+              <tr><td class="name">ООО «ГродноКарго»</td><td>Междунар.</td><td class="num">17,1 млн</td><td class="num"><span class="pill ok">18,9%</span></td><td class="num">3</td><td>Хоружко А.</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <section class="panel">
+        <div class="panel-head"><h2>Воронка по стадиям</h2></div>
+        <div class="table-wrap">
+          <table class="data-table">
+            <thead>
+              <tr>
+                <th>Стадия</th>
+                <th class="num">Сделок</th>
+                <th class="num">Сумма, ₽</th>
+                <th class="num">Взвешенная, ₽</th>
+                <th class="num">Ср. возраст, дн.</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td>Запрос получен</td><td class="num">38</td><td class="num">142 млн</td><td class="num">28 млн</td><td class="num">2,1</td></tr>
+              <tr><td>КП отправлено</td><td class="num">52</td><td class="num">186 млн</td><td class="num">74 млн</td><td class="num">5,8</td></tr>
+              <tr><td>Переговоры</td><td class="num">24</td><td class="num">98 млн</td><td class="num">59 млн</td><td class="num">11,4</td></tr>
+              <tr><td>Договор на подписи</td><td class="num">13</td><td class="num">52 млн</td><td class="num">42 млн</td><td class="num">6,2</td></tr>
+            </tbody>
+            <tfoot>
+              <tr><td><strong>Итого</strong></td><td class="num"><strong>127</strong></td><td class="num"><strong>482 млн</strong></td><td class="num"><strong>203 млн</strong></td><td class="num">—</td></tr>
+            </tfoot>
+          </table>
+        </div>
+      </section>
+
+      <p class="demo-note">Сводка агрегирует CRM, биллинг и операции. Все суммы в российских рублях. Связанные панели: <a href="cfo.html">CFO</a>, <a href="transport.html">Транспорт</a>, <a href="sales-team.html">Продажи</a>.</p>
+    </div>
+  </main>
+
+  <footer class="demo-footer">
+    <div class="wrap">ALFAKIT NEXT · демо · <a href="index.html">← все панели</a></div>
+  </footer>
+</body>
+</html>
