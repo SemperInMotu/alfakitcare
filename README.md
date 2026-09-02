@@ -26,7 +26,7 @@ Analytics dashboards remain static HTML in `public/analytics/` (noindex).
 
 ## Deploy
 
-Repo: [github.com/vitalikus/alfakitcare](https://github.com/vitalikus/alfakitcare)
+Repo: [github.com/SemperInMotu/alfakitcare](https://github.com/SemperInMotu/alfakitcare)
 
 GitHub Actions (`.github/workflows/deploy.yml`) builds `out/` and publishes to Pages. Custom domain: `alfakit.by` via `public/CNAME`.
 
