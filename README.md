@@ -26,6 +26,10 @@ Analytics dashboards remain static HTML in `public/analytics/` (noindex).
 
 ## Deploy
 
+Repo: [github.com/vitalikus/alfakitcare](https://github.com/vitalikus/alfakitcare)
+
 GitHub Actions (`.github/workflows/deploy.yml`) builds `out/` and publishes to Pages. Custom domain: `alfakit.by` via `public/CNAME`.
+
+**GitHub → Settings → Pages:** Source = **GitHub Actions**, Custom domain = `alfakit.by`, Enforce HTTPS.
 
 Legacy Vite files (`vite.config.js`, root `index.html`, …) are kept for reference until removed.
