@@ -1,15 +1,12 @@
-import type { ReactNode } from 'react';
 import { MarketingScripts } from '@/components/MarketingScripts';
 import { MarketingShell } from '@/components/MarketingShell';
 import { HtmlMain } from '@/components/HtmlMain';
-import type { Locale } from '@/lib/i18n';
+import type { Locale, PageKind } from '@/lib/i18n';
 import { LangAttr } from '@/components/LangAttr';
-
-type Variant = 'home' | 'modules';
 
 type Props = {
   locale: Locale;
-  variant: Variant;
+  variant: PageKind;
   html: string;
   jsonLd?: string | null;
   langRoot?: boolean;

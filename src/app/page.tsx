@@ -1,17 +1,9 @@
 import { MarketingPage } from '@/components/MarketingPage';
 import { buildPageMetadata } from '@/lib/metadata';
-import { en_home_html, en_home_jsonLd } from '@/content/en-home';
+import { ru_home_html, ru_home_jsonLd } from '@/content/ru-home';
 
-export const metadata = buildPageMetadata('en', 'home');
+export const metadata = buildPageMetadata('ru', 'home');
 
 export default function HomePage() {
-  return (
-    <MarketingPage
-      locale="en"
-      variant="home"
-      html={en_home_html}
-      jsonLd={en_home_jsonLd}
-      langRoot
-    />
-  );
+  return <MarketingPage locale="ru" variant="home" html={ru_home_html} jsonLd={ru_home_jsonLd} />;
 }

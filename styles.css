@@ -490,6 +490,15 @@ a:hover {
   border-top-color: var(--steel);
 }
 
+.modernize {
+  background: var(--paper);
+  border-bottom: 1px solid var(--line);
+}
+
+.modernize .package-note {
+  margin-top: 1.25rem;
+}
+
 .dual-block h3 {
   margin: 0 0 0.25rem;
   font-family: var(--font-display);

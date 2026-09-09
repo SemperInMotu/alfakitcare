@@ -1,64 +1,5 @@
-import type { Locale } from '@/lib/i18n';
-import { LANG_LABELS, localePath, modulesPath } from '@/lib/i18n';
-
-type Variant = 'home' | 'modules';
-
-const NAV: Record<Locale, Record<Variant, { label: string; href: string }[]>> = {
-  en: {
-    home: [
-      { label: 'Platform', href: '#platform' },
-      { label: 'Audit', href: '#audit' },
-      { label: 'Modules', href: '#functions' },
-      { label: 'Packages', href: '#packages' },
-      { label: 'Cases', href: '#cases' },
-      { label: 'FAQ', href: '#faq' },
-      { label: 'Contact', href: '#contact' },
-    ],
-    modules: [
-      { label: 'Audit', href: '/#audit' },
-      { label: 'Clusters', href: '/#functions' },
-      { label: 'Packages', href: '/#packages' },
-      { label: 'FAQ', href: '/#faq' },
-      { label: 'Contact', href: '/#contact' },
-    ],
-  },
-  ru: {
-    home: [
-      { label: 'Платформа', href: '#platform' },
-      { label: 'Аудит', href: '#audit' },
-      { label: 'Модули', href: '#functions' },
-      { label: 'Пакеты', href: '#packages' },
-      { label: 'Кейсы', href: '#cases' },
-      { label: 'FAQ', href: '#faq' },
-      { label: 'Контакты', href: '#contact' },
-    ],
-    modules: [
-      { label: 'Аудит', href: '/ru/#audit' },
-      { label: 'Кластеры', href: '/ru/#functions' },
-      { label: 'Пакеты', href: '/ru/#packages' },
-      { label: 'FAQ', href: '/ru/#faq' },
-      { label: 'Контакты', href: '/ru/#contact' },
-    ],
-  },
-  be: {
-    home: [
-      { label: 'Платформа', href: '#platform' },
-      { label: 'Аўдыт', href: '#audit' },
-      { label: 'Модулі', href: '#functions' },
-      { label: 'Пакеты', href: '#packages' },
-      { label: 'Кейсы', href: '#cases' },
-      { label: 'FAQ', href: '#faq' },
-      { label: 'Кантакты', href: '#contact' },
-    ],
-    modules: [
-      { label: 'Аўдыт', href: '/be/#audit' },
-      { label: 'Кластары', href: '/be/#functions' },
-      { label: 'Пакеты', href: '/be/#packages' },
-      { label: 'FAQ', href: '/be/#faq' },
-      { label: 'Кантакты', href: '/be/#contact' },
-    ],
-  },
-};
+import type { Locale, PageKind } from '@/lib/i18n';
+import { CONTENT_LOCALES, LANG_LABELS, VISIBLE_LOCALES, homeUrl, pagePath } from '@/lib/i18n';
 
 const CONTACT: Record<Locale, string> = {
   en: 'Contact',
@@ -72,36 +13,112 @@ const SKIP: Record<Locale, string> = {
   be: 'Да змесціва',
 };
 
-const FOOTER_BRAND: Record<Locale, Record<Variant, string>> = {
-  en: { home: 'ALFAKIT Care · alfakit.by', modules: 'ALFAKIT Care · module catalogue' },
-  ru: { home: 'ALFAKIT Care · alfakit.by', modules: 'ALFAKIT Care · каталог модулей' },
-  be: { home: 'ALFAKIT Care · alfakit.by', modules: 'ALFAKIT Care · каталог модуляў' },
+const FOOTER_BRAND: Record<Locale, Record<PageKind, string>> = {
+  en: {
+    home: 'ALFAKIT Care · alfakit.by',
+    modules: 'ALFAKIT Care · module catalogue',
+    faq: 'ALFAKIT Care · FAQ',
+    next: 'ALFAKIT Care · NEXT waitlist',
+    smart: 'ALFAKIT Care · SMART',
+    sitemap: 'ALFAKIT Care · sitemap',
+  },
+  ru: {
+    home: 'ALFAKIT Care · alfakit.by',
+    modules: 'ALFAKIT Care · каталог модулей',
+    faq: 'ALFAKIT Care · FAQ',
+    next: 'ALFAKIT Care · NEXT waitlist',
+    smart: 'ALFAKIT Care · SMART',
+    sitemap: 'ALFAKIT Care · карта сайта',
+  },
+  be: {
+    home: 'ALFAKIT Care · alfakit.by',
+    modules: 'ALFAKIT Care · каталог модуляў',
+    faq: 'ALFAKIT Care · FAQ',
+    next: 'ALFAKIT Care · NEXT waitlist',
+    smart: 'ALFAKIT Care · SMART',
+    sitemap: 'ALFAKIT Care · карта сайта',
+  },
 };
 
-const FOOTER_PRACTICE: Record<Locale, string> = {
-  en: 'A',
-  ru: 'Практика',
-  be: 'Практыка',
+const FOOTER_OWNER: Record<Locale, string> = {
+  en: 'Vitali Kharuzhko, Minsk, Belarus',
+  ru: 'Хоружко В.В., Минск, Беларусь',
+  be: 'Хоружко В.В., Минск, Беларусь',
 };
+
+const ALSO: Record<Locale, { smart: string; data: string; next: string; projects: string }> = {
+  en: {
+    smart: 'SMART',
+    data: 'Data',
+    next: 'NEXT waitlist',
+    projects: 'Projects',
+  },
+  ru: {
+    smart: 'SMART',
+    data: 'Данные',
+    next: 'NEXT waitlist',
+    projects: 'Проекты',
+  },
+  be: {
+    smart: 'SMART',
+    data: 'Дадзеныя',
+    next: 'NEXT waitlist',
+    projects: 'Праекты',
+  },
+};
+
+const COPYRIGHT_START = 2018;
+
+function navFor(locale: Locale, kind: PageKind): { label: string; href: string }[] {
+  const home = homeUrl(locale);
+  const hash = (id: string) => (kind === 'home' ? `#${id}` : `${home}#${id}`);
+  const faqHref = locale === 'be' ? pagePath('ru', 'faq') : pagePath(locale, 'faq');
+  const smartHref = locale === 'be' ? pagePath('ru', 'smart') : pagePath(locale, 'smart');
+  const modernizeHref = locale === 'be' ? '/#modernize' : hash('modernize');
+  const labels =
+    locale === 'ru'
+      ? { audit: 'Аудит', modernize: 'Модернизация', modules: 'Модули', packages: 'Пакеты', smart: 'SMART', faq: 'FAQ' }
+      : locale === 'be'
+        ? { audit: 'Аўдыт', modernize: 'Мадернізацыя', modules: 'Модулі', packages: 'Пакеты', smart: 'SMART', faq: 'FAQ' }
+        : { audit: 'Audit', modernize: 'Modernise', modules: 'Modules', packages: 'Packages', smart: 'SMART', faq: 'FAQ' };
+
+  return [
+    { label: labels.audit, href: hash('audit') },
+    { label: labels.modernize, href: modernizeHref },
+    { label: labels.modules, href: pagePath(locale, 'modules') },
+    { label: labels.packages, href: hash('packages') },
+    { label: labels.smart, href: smartHref },
+    { label: labels.faq, href: faqHref },
+  ];
+}
 
 type Props = {
   locale: Locale;
-  variant: Variant;
+  variant: PageKind;
   langRoot?: boolean;
   children: React.ReactNode;
 };
 
 export function MarketingShell({ locale, variant, langRoot = false, children }: Props) {
-  const home = localePath(locale);
+  const home = homeUrl(locale);
   const brandHref = variant === 'home' ? '#top' : home;
   const contactHref = variant === 'home' ? '#contact' : `${home}#contact`;
-  const nav = NAV[locale][variant];
+  const nav = navFor(locale, variant);
+  const year = new Date().getFullYear();
+  const also = ALSO[locale];
+  const smartLocale = locale === 'be' ? 'ru' : locale;
+  const nextLocale = locale === 'be' ? 'ru' : locale;
+  const sitemapHref = locale === 'be' ? pagePath('ru', 'sitemap') : pagePath(locale, 'sitemap');
+  const sitemapLabel = locale === 'en' ? 'Sitemap' : 'Карта сайта';
 
-  const langLinks = (['en', 'ru', 'be'] as Locale[]).map((l) => ({
-    locale: l,
-    href: l === locale ? null : `${localePath(l)}${variant === 'modules' ? 'modules.html' : ''}`,
-    label: LANG_LABELS[l],
-  }));
+  const langLinks = [
+    ...(locale === 'be' ? [{ locale: 'be' as const, href: null as string | null, label: LANG_LABELS.be }] : []),
+    ...VISIBLE_LOCALES.map((l) => {
+      const available = CONTENT_LOCALES[variant].includes(l);
+      const href = l === locale ? null : available ? pagePath(l, variant) : pagePath(l, 'home');
+      return { locale: l, href, label: LANG_LABELS[l] };
+    }),
+  ];
 
   return (
     <>
@@ -128,7 +145,7 @@ export function MarketingShell({ locale, variant, langRoot = false, children }: 
           </a>
           <nav className="nav" aria-label="Sections">
             {nav.map((item) => (
-              <a key={item.href} href={item.href}>
+              <a key={item.href + item.label} href={item.href}>
                 {item.label}
               </a>
             ))}
@@ -157,62 +174,38 @@ export function MarketingShell({ locale, variant, langRoot = false, children }: 
       <footer className="site-footer">
         <div className="wrap footer-inner">
           <p className="footer-brand">{FOOTER_BRAND[locale][variant]}</p>
-          <p className="footer-practice">
-            {FOOTER_PRACTICE[locale]}{' '}
-            <a href="https://semperinmotu.com/">Semper In Motu</a>
-            {locale === 'ru' ? '' : locale === 'be' ? '' : ''}
-          </p>
+          <p className="footer-owner">{FOOTER_OWNER[locale]}</p>
           <p className="footer-meta">
             <a href="mailto:info@alfakit.by">info@alfakit.by</a>
-            <span aria-hidden="true">
-              ·
-            </span>
+            <span aria-hidden="true"> · </span>
             <a href="tel:+375296757858">+375 29 675-78-58</a>
-            <span aria-hidden="true">·</span>
+            <span aria-hidden="true"> · </span>
             <span>UNP 102176582</span>
-            {variant === 'modules' && locale === 'en' && (
-              <>
-                <span aria-hidden="true"> · </span>
-                <a href="/">Home</a>
-              </>
-            )}
-            {variant === 'home' && (
-              <>
-                {langLinks
-                  .filter((l) => l.href)
-                  .map((l) => (
-                    <span key={l.locale}>
-                      <span aria-hidden="true"> · </span>
-                      <a href={l.href!} hrefLang={l.locale}>
-                        {l.label}
-                      </a>
-                    </span>
-                  ))}
-                <span aria-hidden="true"> · </span>
-                <span>
-                  © <span id="year">{new Date().getFullYear()}</span>
-                </span>
-              </>
-            )}
-          </p>
-          {variant === 'modules' && (
-            <p className="footer-meta footer-lang">
-              {langLinks.map((l) =>
-                l.href ? (
-                  <a key={l.locale} href={`${localePath(l.locale)}modules.html`} hrefLang={l.locale}>
+            <span aria-hidden="true"> · </span>
+            <span>
+              © {COPYRIGHT_START}–{year}
+            </span>
+            {langLinks
+              .filter((l) => l.href)
+              .map((l) => (
+                <span key={l.locale}>
+                  <span aria-hidden="true"> · </span>
+                  <a href={l.href!} hrefLang={l.locale}>
                     {l.label}
                   </a>
-                ) : (
-                  <span key={l.locale} className="lang-current">
-                    {l.label}
-                  </span>
-                ),
-              )}
-            </p>
-          )}
+                </span>
+              ))}
+          </p>
           <p className="footer-also">
-            Data &amp; SMART: <a href="https://semperinmotu.com/ops/">semperinmotu.com/ops</a> · Projects:{' '}
-            <a href="https://vitalykhoruzhko.com/">vitalykhoruzhko.com</a>
+            <a href={pagePath(smartLocale, 'smart')}>{also.smart}</a>
+            <span aria-hidden="true"> · </span>
+            <a href={pagePath(nextLocale, 'next')}>{also.next}</a>
+            <span aria-hidden="true"> · </span>
+            <a href={sitemapHref}>{sitemapLabel}</a>
+            <span aria-hidden="true"> · </span>
+            {also.data}: <a href="https://semperinmotu.com/ops/data.html">semperinmotu.com/ops/data</a>
+            <span aria-hidden="true"> · </span>
+            {also.projects}: <a href="https://vitalykhoruzhko.com/">vitalykhoruzhko.com</a>
           </p>
         </div>
       </footer>

@@ -2,8 +2,8 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://alfakit.by/</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://alfakit.by/" />
-    <xhtml:link rel="alternate" hreflang="ru" href="https://alfakit.by/ru/" />
+    <xhtml:link rel="alternate" hreflang="ru" href="https://alfakit.by/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://alfakit.by/en/" />
     <xhtml:link rel="alternate" hreflang="be" href="https://alfakit.by/be/" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://alfakit.by/" />
     <changefreq>monthly</changefreq>
@@ -11,47 +11,111 @@
   </url>
   <url>
     <loc>https://alfakit.by/modules.html</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://alfakit.by/modules.html" />
-    <xhtml:link rel="alternate" hreflang="ru" href="https://alfakit.by/ru/modules.html" />
+    <xhtml:link rel="alternate" hreflang="ru" href="https://alfakit.by/modules.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://alfakit.by/en/modules.html" />
     <xhtml:link rel="alternate" hreflang="be" href="https://alfakit.by/be/modules.html" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://alfakit.by/modules.html" />
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://alfakit.by/ru/</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://alfakit.by/" />
-    <xhtml:link rel="alternate" hreflang="ru" href="https://alfakit.by/ru/" />
+    <loc>https://alfakit.by/faq</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://alfakit.by/faq" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://alfakit.by/en/faq" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://alfakit.by/faq" />
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://alfakit.by/next</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://alfakit.by/next" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://alfakit.by/en/next" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://alfakit.by/next" />
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://alfakit.by/smart</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://alfakit.by/smart" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://alfakit.by/en/smart" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://alfakit.by/smart" />
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://alfakit.by/sitemap</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://alfakit.by/sitemap" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://alfakit.by/en/sitemap" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://alfakit.by/sitemap" />
+    <changefreq>monthly</changefreq>
+    <priority>0.4</priority>
+  </url>
+  <url>
+    <loc>https://alfakit.by/en/</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://alfakit.by/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://alfakit.by/en/" />
     <xhtml:link rel="alternate" hreflang="be" href="https://alfakit.by/be/" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://alfakit.by/" />
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://alfakit.by/ru/modules.html</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://alfakit.by/modules.html" />
-    <xhtml:link rel="alternate" hreflang="ru" href="https://alfakit.by/ru/modules.html" />
+    <loc>https://alfakit.by/en/modules.html</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://alfakit.by/modules.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://alfakit.by/en/modules.html" />
     <xhtml:link rel="alternate" hreflang="be" href="https://alfakit.by/be/modules.html" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://alfakit.by/modules.html" />
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://alfakit.by/en/faq</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://alfakit.by/faq" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://alfakit.by/en/faq" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://alfakit.by/faq" />
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://alfakit.by/en/next</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://alfakit.by/next" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://alfakit.by/en/next" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://alfakit.by/next" />
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://alfakit.by/en/smart</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://alfakit.by/smart" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://alfakit.by/en/smart" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://alfakit.by/smart" />
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://alfakit.by/en/sitemap</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://alfakit.by/sitemap" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://alfakit.by/en/sitemap" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://alfakit.by/sitemap" />
+    <changefreq>monthly</changefreq>
+    <priority>0.4</priority>
   </url>
   <url>
     <loc>https://alfakit.by/be/</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://alfakit.by/" />
-    <xhtml:link rel="alternate" hreflang="ru" href="https://alfakit.by/ru/" />
+    <xhtml:link rel="alternate" hreflang="ru" href="https://alfakit.by/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://alfakit.by/en/" />
     <xhtml:link rel="alternate" hreflang="be" href="https://alfakit.by/be/" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://alfakit.by/" />
     <changefreq>monthly</changefreq>
-    <priority>1.0</priority>
+    <priority>0.5</priority>
   </url>
   <url>
     <loc>https://alfakit.by/be/modules.html</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://alfakit.by/modules.html" />
-    <xhtml:link rel="alternate" hreflang="ru" href="https://alfakit.by/ru/modules.html" />
+    <xhtml:link rel="alternate" hreflang="ru" href="https://alfakit.by/modules.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://alfakit.by/en/modules.html" />
     <xhtml:link rel="alternate" hreflang="be" href="https://alfakit.by/be/modules.html" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://alfakit.by/modules.html" />
     <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <priority>0.4</priority>
   </url>
 </urlset>
