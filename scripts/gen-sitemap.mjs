@@ -4,26 +4,55 @@ import { fileURLToPath } from 'node:url';
 
 const root = resolve(dirname(fileURLToPath(import.meta.url)), '..');
 const HOST = 'https://alfakit.by';
+const DEFAULT = 'ru';
 
-/* /analytics/* stays out: those demo dashboards are noindex. */
-const pages = ['', 'modules.html'];
-const locales = ['en', 'ru', 'be'];
-const url = (lang, page) => `${HOST}${lang === 'en' ? '' : `/${lang}`}/${page}`;
+const PAGES = {
+  ru: [
+    ['', 1.0],
+    ['modules.html', 0.7],
+    ['faq', 0.8],
+    ['next', 0.7],
+    ['smart', 0.8],
+    ['sitemap', 0.4],
+  ],
+  en: [
+    ['', 1.0],
+    ['modules.html', 0.7],
+    ['faq', 0.8],
+    ['next', 0.7],
+    ['smart', 0.8],
+    ['sitemap', 0.4],
+  ],
+  be: [
+    ['', 0.5],
+    ['modules.html', 0.4],
+  ],
+};
 
-const entries = locales.flatMap((lang) =>
-  pages.map((page) =>
-    [
+function loc(lang, page) {
+  const prefix = lang === DEFAULT ? '' : `/${lang}`;
+  if (!page) return prefix ? `${HOST}${prefix}/` : `${HOST}/`;
+  return `${HOST}${prefix}/${page}`;
+}
+
+function hreflangFor(page) {
+  const langs = page === '' || page === 'modules.html' ? ['ru', 'en', 'be'] : ['ru', 'en'];
+  return langs;
+}
+
+const entries = Object.entries(PAGES).flatMap(([lang, pages]) =>
+  pages.map(([page, priority]) => {
+    const alts = hreflangFor(page);
+    return [
       '  <url>',
-      `    <loc>${url(lang, page)}</loc>`,
-      ...locales.map(
-        (alt) => `    <xhtml:link rel="alternate" hreflang="${alt}" href="${url(alt, page)}" />`,
-      ),
-      `    <xhtml:link rel="alternate" hreflang="x-default" href="${url('en', page)}" />`,
+      `    <loc>${loc(lang, page)}</loc>`,
+      ...alts.map((alt) => `    <xhtml:link rel="alternate" hreflang="${alt}" href="${loc(alt, page)}" />`),
+      `    <xhtml:link rel="alternate" hreflang="x-default" href="${loc('ru', page)}" />`,
       '    <changefreq>monthly</changefreq>',
-      `    <priority>${page === '' ? '1.0' : '0.7'}</priority>`,
+      `    <priority>${priority.toFixed(1)}</priority>`,
       '  </url>',
-    ].join('\n'),
-  ),
+    ].join('\n');
+  }),
 );
 
 writeFileSync(

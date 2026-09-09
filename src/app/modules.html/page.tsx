@@ -1,9 +1,9 @@
 import { MarketingPage } from '@/components/MarketingPage';
 import { buildPageMetadata } from '@/lib/metadata';
-import { en_modules_html } from '@/content/en-modules';
+import { ru_modules_html } from '@/content/ru-modules';
 
-export const metadata = buildPageMetadata('en', 'modules');
+export const metadata = buildPageMetadata('ru', 'modules');
 
 export default function ModulesPage() {
-  return <MarketingPage locale="en" variant="modules" html={en_modules_html} />;
+  return <MarketingPage locale="ru" variant="modules" html={ru_modules_html} />;
 }

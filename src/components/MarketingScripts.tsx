@@ -4,7 +4,7 @@ import { useEffect } from 'react';
 import type { Locale } from '@/lib/i18n';
 
 const LANG_KEY = 'alfakit-lang';
-const LANG_PATH: Record<Locale, string> = { en: '/', ru: '/ru/', be: '/be/' };
+const LANG_PATH: Record<Locale, string> = { en: '/en/', ru: '/', be: '/be/' };
 const HINT: Record<'ru' | 'be', [string, string]> = {
   ru: ['Сайт доступен на русском', 'Перейти'],
   be: ['Сайт даступны па-беларуску', 'Перайсці'],
@@ -37,7 +37,7 @@ export function MarketingScripts({ locale, langRoot = false }: Props) {
   useEffect(() => {
     const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
     const revealTargets = document.querySelectorAll(
-      '.platform-points li, .dual-block, .bpr-steps article, .cluster, .product, .role-card, .dash-figure, .support-item, .package, .case, .process-list li, .audience-list li, .contact-inner, .price-box, .continuity-grid li, .faq-list details, .lead-form',
+      '.platform-points li, .dual-block, .bpr-steps article, .cluster, .product, .role-card, .dash-figure, .support-item, .package, .case, .process-list li, .audience-list li, .contact-inner, .price-box, .continuity-grid li, .faq-list details, .lead-form, .pipeline li, .scorecard, .modernize .support-item',
     );
 
     if (reduceMotion || !('IntersectionObserver' in window) || !revealTargets.length) return;
@@ -95,6 +95,28 @@ export function MarketingScripts({ locale, langRoot = false }: Props) {
   }, []);
 
   useEffect(() => {
+    const row = document.querySelector('[data-intent-row]');
+    const topic = document.querySelector('[data-intent-topic]') as HTMLInputElement | null;
+    if (!row || !topic) return;
+
+    const buttons = Array.from(row.querySelectorAll<HTMLButtonElement>('[data-intent]'));
+    const apply = (value: string) => {
+      topic.value = value;
+      buttons.forEach((btn) => btn.classList.toggle('is-active', btn.getAttribute('data-intent') === value));
+    };
+
+    const initial = new URLSearchParams(window.location.search).get('topic');
+    if (initial && buttons.some((btn) => btn.getAttribute('data-intent') === initial)) apply(initial);
+
+    const onClick = (event: Event) => {
+      const value = (event.currentTarget as HTMLElement).getAttribute('data-intent');
+      if (value) apply(value);
+    };
+    buttons.forEach((btn) => btn.addEventListener('click', onClick));
+    return () => buttons.forEach((btn) => btn.removeEventListener('click', onClick));
+  }, []);
+
+  useEffect(() => {
     const remember = (lang: string) => {
       try {
         window.localStorage.setItem(LANG_KEY, lang);
@@ -111,13 +133,17 @@ export function MarketingScripts({ locale, langRoot = false }: Props) {
 
     const params = new URLSearchParams(window.location.search);
     const forced = params.get('lang');
-    if (forced && LANG_PATH[forced as Locale]) remember(forced);
+    if (forced === 'ru' || forced === 'en') remember(forced);
 
     let stored: string | null = null;
     try {
       stored = window.localStorage.getItem(LANG_KEY);
     } catch {
       stored = null;
+    }
+    if (stored === 'be') {
+      remember('ru');
+      stored = 'ru';
     }
 
     const tags = (navigator.languages?.length ? navigator.languages : [navigator.language || '']).map(
@@ -126,13 +152,7 @@ export function MarketingScripts({ locale, langRoot = false }: Props) {
 
     const byLanguage = tags.find((tag) => tag.startsWith('be') || tag.startsWith('ru'));
     const byRegion = tags.find((tag) => /-(by|ru|kz)\b/.test(tag));
-    const detected: 'ru' | 'be' | null = byLanguage
-      ? byLanguage.startsWith('be')
-        ? 'be'
-        : 'ru'
-      : byRegion
-        ? 'ru'
-        : null;
+    const detected: 'ru' | null = byLanguage || byRegion ? 'ru' : null;
 
     if (!detected) return;
 

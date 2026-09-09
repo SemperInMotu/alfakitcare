@@ -31,7 +31,7 @@ function extractJsonLd(html) {
 
 function fixPaths(html, locale) {
   let out = html;
-  const prefix = locale === 'en' ? '' : `/${locale}`;
+  const prefix = locale === 'ru' ? '' : `/${locale}`;
 
   out = out
     .replace(/\bhref="index\.html#/g, `href="${prefix || '/'}#`)
@@ -39,16 +39,18 @@ function fixPaths(html, locale) {
     .replace(/\bhref="\.\.\/index\.html#/g, `href="${prefix || '/'}#`)
     .replace(/\bhref="\.\.\/index\.html"/g, `href="${prefix || '/'}"`)
     .replace(/\bhref="modules\.html"/g, `href="${prefix}/modules.html"`)
-    .replace(/\bhref="\.\.\/modules\.html"/g, 'href="/modules.html"')
-    .replace(/\bhref="ru\/modules\.html"/g, 'href="/ru/modules.html"')
+    .replace(/\bhref="\.\.\/modules\.html"/g, 'href="/en/modules.html"')
+    .replace(/\bhref="ru\/modules\.html"/g, 'href="/modules.html"')
     .replace(/\bhref="be\/modules\.html"/g, 'href="/be/modules.html"')
-    .replace(/\bhref="ru\/"/g, 'href="/ru/"')
+    .replace(/\bhref="en\/modules\.html"/g, 'href="/en/modules.html"')
+    .replace(/\bhref="ru\/"/g, 'href="/"')
+    .replace(/\bhref="en\/"/g, 'href="/en/"')
     .replace(/\bhref="be\/"/g, 'href="/be/"')
     .replace(/\bhref="assets\//g, 'href="/assets/')
     .replace(/\bsrc="assets\//g, 'src="/assets/')
     .replace(/action="https:\/\/formsubmit\.co\/info@alfakit\.by"/g, (m) => m);
 
-  if (locale === 'en') {
+  if (locale === 'ru') {
     out = out.replace(
       /name="_next" value="https:\/\/alfakit\.by\/\?sent=1#contact"/,
       'name="_next" value="https://alfakit.by/?sent=1#contact"',

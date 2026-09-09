@@ -490,6 +490,15 @@ a:hover {
   border-top-color: var(--steel);
 }
 
+.modernize {
+  background: var(--paper);
+  border-bottom: 1px solid var(--line);
+}
+
+.modernize .package-note {
+  margin-top: 1.25rem;
+}
+
 .dual-block h3 {
   margin: 0 0 0.25rem;
   font-family: var(--font-display);
@@ -1395,6 +1404,12 @@ a:hover {
   letter-spacing: -0.02em;
 }
 
+.footer-owner {
+  margin: 0 0 0.35rem;
+  font-size: 0.85rem;
+  color: var(--muted);
+}
+
 .footer-practice {
   margin: -0.35rem 0 0.75rem;
   font-size: 0.82rem;
@@ -1648,4 +1663,226 @@ html.js-anim .reveal.is-visible {
   .lead-form .form-row {
     grid-template-columns: 1fr;
   }
+
+  .intent-row {
+    grid-template-columns: 1fr;
+  }
+
+  .pipeline {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.page-head {
+  padding-top: calc(var(--header-h) + 2.5rem);
+}
+
+.page-head h1 {
+  margin: 0 0 0.85rem;
+  font-family: var(--font-display);
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  line-height: 1.12;
+  font-size: clamp(1.85rem, 3.6vw, 2.85rem);
+}
+
+.prose {
+  max-width: 46rem;
+}
+
+.prose h2 {
+  margin: 2rem 0 0.75rem;
+}
+
+.prose ul {
+  margin: 0 0 1.25rem;
+  padding-left: 1.2rem;
+}
+
+.prose li + li {
+  margin-top: 0.4rem;
+}
+
+.sitemap-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
+  gap: 2rem 2.5rem;
+}
+
+.sitemap-grid h2 {
+  margin: 0 0 0.75rem;
+  font-size: 1.05rem;
+}
+
+.sitemap-list {
+  margin: 0;
+  padding-left: 1.1rem;
+}
+
+.sitemap-list li + li {
+  margin-top: 0.45rem;
+}
+
+.error-page .hero-cta {
+  margin-top: 1.4rem;
+}
+
+.intent-row {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0.55rem;
+  margin-bottom: 0.35rem;
+}
+
+.intent-btn {
+  margin: 0;
+  padding: 0.7rem 0.65rem;
+  border: 1px solid color-mix(in srgb, var(--white) 22%, transparent);
+  border-radius: 2px;
+  background: color-mix(in srgb, var(--ink) 70%, #000);
+  color: var(--white);
+  font: 600 0.82rem/1.3 var(--font-body);
+  cursor: pointer;
+  text-align: center;
+}
+
+.intent-btn:hover,
+.intent-btn.is-active {
+  border-color: var(--steel-bright);
+  background: color-mix(in srgb, var(--steel) 35%, #000);
+}
+
+.legal-block {
+  margin: 1.25rem 0 0;
+  display: grid;
+  gap: 0.65rem;
+}
+
+.legal-block div {
+  margin: 0;
+}
+
+.legal-block dt {
+  font-size: 0.75rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: color-mix(in srgb, var(--white) 45%, var(--steel-bright));
+}
+
+.legal-block dd {
+  margin: 0.15rem 0 0;
+  color: var(--white);
+}
+
+.pipeline {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.pipeline li {
+  margin: 0;
+  padding: 1rem 1.1rem;
+  border: 1px solid var(--line);
+  background: var(--white);
+}
+
+.pipeline li span {
+  display: block;
+  margin-bottom: 0.35rem;
+  font-family: var(--font-display);
+  font-weight: 700;
+  color: var(--steel);
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  font-size: 0.78rem;
+}
+
+.scorecard {
+  max-width: 36rem;
+  padding: 1.35rem 1.5rem 1.5rem;
+  border: 1px solid var(--line);
+  background: var(--white);
+  position: relative;
+}
+
+.scorecard-kicker {
+  position: absolute;
+  top: 0.85rem;
+  right: 1rem;
+  margin: 0;
+  font-size: 0.72rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+.scorecard header {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  align-items: baseline;
+  margin-bottom: 1rem;
+  padding-right: 4rem;
+}
+
+.scorecard header p {
+  margin: 0;
+}
+
+.scorecard-score {
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: 1.8rem;
+  line-height: 1;
+}
+
+.scorecard-score span {
+  display: block;
+  margin-top: 0.25rem;
+  font-size: 0.72rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--muted);
+  font-weight: 600;
+}
+
+.scorecard dl {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.75rem 1.25rem;
+  margin: 0 0 1rem;
+}
+
+.scorecard dt {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--muted);
+}
+
+.scorecard dd {
+  margin: 0.15rem 0 0;
+  font-weight: 600;
+}
+
+.scorecard > p:last-child {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.92rem;
 }
