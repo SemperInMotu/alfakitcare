@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import { IBM_Plex_Sans, Syne } from 'next/font/google';
 import { GoogleAnalytics } from '@/components/GoogleAnalytics';
+import { YandexMetrika } from '@/components/YandexMetrika';
 import './globals.css';
 
 const ibm = IBM_Plex_Sans({
@@ -25,6 +26,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     <html lang="ru" className={`${ibm.variable} ${syne.variable}`}>
       <body>
         <GoogleAnalytics />
+        <YandexMetrika />
         {children}
       </body>
     </html>
