@@ -1,3 +1,11 @@
+/**
+ * XML sitemap for Google / Bing.
+ * Spec: https://developers.google.com/search/docs/crawling-indexing/sitemaps/build-sitemap
+ * - UTF-8, absolute https URLs
+ * - <loc> required; <lastmod> preferred
+ * - hreflang via xhtml:link (language versions)
+ * - only indexable marketing pages (no /analytics demos)
+ */
 import { writeFileSync } from 'node:fs';
 import { resolve, dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
@@ -5,7 +13,9 @@ import { fileURLToPath } from 'node:url';
 const root = resolve(dirname(fileURLToPath(import.meta.url)), '..');
 const HOST = 'https://alfakit.by';
 const DEFAULT = 'ru';
+const LASTMOD = new Date().toISOString().slice(0, 10);
 
+/** @type {Record<string, Array<[string, number]>>} */
 const PAGES = {
   ru: [
     ['', 1.0],
@@ -36,34 +46,40 @@ function loc(lang, page) {
 }
 
 function hreflangFor(page) {
-  const langs = page === '' || page === 'modules.html' ? ['ru', 'en', 'be'] : ['ru', 'en'];
-  return langs;
+  return page === '' || page === 'modules.html' ? ['ru', 'en', 'be'] : ['ru', 'en'];
+}
+
+function escapeXml(s) {
+  return s.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
 }
 
 const entries = Object.entries(PAGES).flatMap(([lang, pages]) =>
   pages.map(([page, priority]) => {
     const alts = hreflangFor(page);
+    const url = loc(lang, page);
     return [
       '  <url>',
-      `    <loc>${loc(lang, page)}</loc>`,
-      ...alts.map((alt) => `    <xhtml:link rel="alternate" hreflang="${alt}" href="${loc(alt, page)}" />`),
-      `    <xhtml:link rel="alternate" hreflang="x-default" href="${loc('ru', page)}" />`,
-      '    <changefreq>monthly</changefreq>',
+      `    <loc>${escapeXml(url)}</loc>`,
+      `    <lastmod>${LASTMOD}</lastmod>`,
+      ...alts.map(
+        (alt) =>
+          `    <xhtml:link rel="alternate" hreflang="${alt}" href="${escapeXml(loc(alt, page))}" />`,
+      ),
+      `    <xhtml:link rel="alternate" hreflang="x-default" href="${escapeXml(loc('ru', page))}" />`,
+      '    <changefreq>weekly</changefreq>',
       `    <priority>${priority.toFixed(1)}</priority>`,
       '  </url>',
     ].join('\n');
   }),
 );
 
-writeFileSync(
-  resolve(root, 'public/sitemap.xml'),
-  [
-    '<?xml version="1.0" encoding="UTF-8"?>',
-    '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">',
-    ...entries,
-    '</urlset>',
-    '',
-  ].join('\n'),
-  'utf8',
-);
-console.log(`sitemap.xml — ${entries.length} urls`);
+const xml = [
+  '<?xml version="1.0" encoding="UTF-8"?>',
+  '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">',
+  ...entries,
+  '</urlset>',
+  '',
+].join('\n');
+
+writeFileSync(resolve(root, 'public/sitemap.xml'), xml, 'utf8');
+console.log(`sitemap.xml — ${entries.length} urls, lastmod=${LASTMOD}`);

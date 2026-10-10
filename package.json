@@ -4,9 +4,10 @@
   "private": true,
   "scripts": {
     "dev": "next dev -p 5173",
-    "build": "next build && node scripts/fix-html-routes.mjs",
+    "build": "node scripts/gen-sitemap.mjs && next build && node scripts/fix-html-routes.mjs",
     "start": "next start",
-    "extract": "node scripts/extract-content.mjs"
+    "extract": "node scripts/extract-content.mjs",
+    "sitemap": "node scripts/gen-sitemap.mjs"
   },
   "dependencies": {
     "next": "^15.5.0",
